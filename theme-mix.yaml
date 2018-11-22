@@ -1,0 +1,30 @@
+runTasks:
+  clean: true
+  js: true
+  copy: true
+  sass: true
+  html: true
+enableCssThemes: false
+enableCssRTL: false
+copyCwd: node_modules
+copyDest: dist/assets/vendor
+copy:
+  - jquery/dist/jquery.min.js
+  - bootstrap/dist/js/bootstrap.min.*
+  - popper.js/dist/umd/popper.min.*
+  - dom-factory/dist/*
+  - material-design-kit/dist/material-design-kit.*
+  - material-design-icons-iconfont/dist/fonts/*.{eot,ttf,woff,woff2}: dist/assets/fonts/material-icons
+  - '@fortawesome/fontawesome-free/webfonts/*': dist/assets/fonts/fontawesome-free
+  - highlight.js/styles/vs2015.css: dist/assets/vendor/highlight.js
+clean:
+  - dist/**/*.html
+  - dist/assets/{css,fonts,js,vendor}
+sassSrc: src/sass/**/*.scss
+cssDest: dist/assets/css
+jsSrc: src/js/**/**.js
+jsDest: dist/assets/js
+htmlDest: dist/[path][name].html
+htmllint: false
+laravelMixOptions:
+  processCssUrls: false

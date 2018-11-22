@@ -1,0 +1,133 @@
+---
+title: LearnPlus - Student
+slug: student
+bodyClass: layout-sticky-subnav
+---
+{% extends "layouts/fixed.html" %}
+
+{% block page %}
+<div class="bg-gradient-primary py-32pt py-lg-64pt">
+  <div class="{{ containerClass }} page__container">
+    <div class="hero text-center">
+      <h1 class="text-white">Student</h1>
+      <p class="lead measure-lead-max mx-auto text-white-50">A collection of 14 website pages designed to provide students with a complete online learning experience. Inspired from the most popular learning platforms on the web today.</p>
+
+      <a href="{{ demo_url }}student-dashboard.html" target="_blank" class="btn btn-lg btn-outline-white btn-rounded"><i class="material-icons mr-2">person</i> Student demo</a>
+    </div>
+  </div>
+</div>
+
+{% include 'layouts/_navbar.secondary.html' %}
+
+<div class="py-32pt py-lg-64pt {{ containerClass }} page__container">
+
+  {% set student = [
+    {
+      title: "All Courses Catalog",
+      image: "assets/images/choose/student/browse-courses.png",
+      href: "student-browse-courses.html"
+    },
+    {
+      title: "Public View Course",
+      description: "Page for non-paying students with a course video preview, course lessons list, partial access to some lessons, pricing (subscription or single purchase), about the instructor and course ratings",
+      image: "assets/images/choose/student/view-course.png",
+      href: "student-view-course.html"
+    },
+    {
+      title: "Private Take Course",
+      description: "Page for paying members with access to all course lessons and download lesson files",
+      image: "assets/images/choose/student/take-course.png",
+      href: "student-take-course.html"
+    },
+    {
+      title: "Student Dashboard",
+      description: "Page with subscription status, recent courses, student rewards, quiz performance and forum activity",
+      image: "assets/images/choose/student/dashboard.png",
+      href: "student-dashboard.html"
+    },
+    {
+      title: "Take Quiz",
+      description: "Page with a sidebar navigation for the quiz questions, a quiz countdown timer and quiz statistics",
+      image: "assets/images/choose/student/take-quiz.png",
+      href: "student-take-quiz.html"
+    },
+    {
+      title: "Quiz Results",
+      description: "Page displaying the summary of a single quiz submission by a student, displaying the correct answers and offering the possibility to restart the quiz",
+      image: "assets/images/choose/student/quiz-results.png",
+      href: "student-quiz-results.html"
+    },
+    {
+      title: "Edit Account",
+      description: "Page with common editable profile fields (avatar image upload, the student name, email, password, etc) and <strong>Account Billing</strong> settings with saved payment methods",
+      image: "assets/images/choose/student/edit-account.png",
+      href: "student-account-edit.html"
+    },
+    {
+      title: "My Courses",
+      description: "Page displaying only the courses started by the student, with progress activity",
+      image: "assets/images/choose/student/my-courses.png",
+      href: "student-my-courses.html"
+    },
+    {
+      title: "Messages",
+      description: "Page for system notifications or student / instructor private messaging",
+      image: "assets/images/choose/student/messages.png",
+      href: "student-messages.html"
+    },
+    {
+      title: "Billing",
+      description: "Page with payment history, past invoices and overdue payment notice with the option to pay",
+      image: "assets/images/choose/student/billing.png",
+      href: "student-billing.html"
+    },
+    {
+      title: "Make Payment",
+      description: "Page with saved payment options such as credit cards, PayPal or pay by a different card form",
+      image: "assets/images/choose/student/pay.png",
+      href: "student-pay.html"
+    },
+    {
+      title: "Checkout",
+      description: "Page for purchasing multiple items at once",
+      image: "assets/images/choose/student/shopping-cart.png",
+      href: "student-cart.html"
+    },
+    {
+      title: "Printable Invoice",
+      description: "Printable Invoice template page",
+      image: "assets/images/choose/student/invoice.png",
+      href: "student-invoice.html"
+    },
+    {
+      title: "Student Public Profile",
+      description: "Page displaying acquired skills with courses completed by the student and rewards",
+      image: "assets/images/choose/student/profile.png",
+      href: "student-profile.html"
+    }
+  ] %}
+
+  <!-- <h2>Student Application</h2>
+  <p class="lead measure-lead text-black-70 mb-32pt">A collection of 14 website pages designed to provide students with a complete online learning experience. Inspired from the most popular learning platforms on the web today.</p> -->
+  
+  <div class="card-columns card-columns--3">
+    {% for item in student %}
+    <div class="card card-sm">
+      {% if item.image %}
+      <a href="{{ demo_url }}{{ item.href }}" target="_blank" class="preview">
+        <img src="{{ item.image }}" alt="{{ item.title }}" class="img-fluid">
+      </a>
+      {% endif %}
+      <div class="card-body">
+        {% if item.title %}
+          <strong class="text-body">{{ item.title | safe }}</strong><br>
+        {% endif %}
+        {% if item.description %}
+          <span class="text-black-70">{{ item.description | safe }}</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

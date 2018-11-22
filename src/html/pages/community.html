@@ -1,0 +1,50 @@
+---
+title: LearnPlus - Community
+slug: community
+---
+{% extends "layouts/fixed.html" %}
+
+{% block page %}
+<div class="bg-gradient-primary py-32pt py-lg-64pt">
+  <div class="{{ containerClass }} page__container">
+    <div class="hero text-center">
+      <h1 class="text-white">Community</h1>
+      <p class="lead measure-lead-max mx-auto text-white-50">Join our community to discuss <strong class="text-white-70">LearnPlus</strong>, get updates and access to the latest versions.</p>
+
+      <div class="card d-inline-flex m-0">
+        <div class="card-body">
+          <h4>Looking for these?</h4>
+          <div class="d-flex align-items-center">
+            <a href="documentation.html">Documentation</a>
+            <i class="material-icons mx-2 text-black-50">adjust</i>
+            <a href="changelog.html">Release Notes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="border-bottom-2 bg-white">
+  <div class="py-32pt py-lg-64pt text-center {{ containerClass }} page__container">
+    <h2>GitLab</h2>
+    <p class="lead measure-lead mx-auto text-black-70">You can join LearnPlus GitLab repository to access the latest changes, bug fixes and features without having to wait for a new ThemeForest release. Also, some of the npm dependencies are private repositories for which you'll also get access.</p>
+    <a href="#" class="btn btn-rounded btn-lg btn-outline-dark disabled" disabled="disabled">Join LearnPlus on GitLab <span class="ml-2 badge badge-dark">coming soon</span></a>
+  </div>
+</div>
+<div class="py-32pt py-lg-64pt text-center {{ containerClass }} page__container mb-32pt">
+  <h2 class="d-inline-flex mx-auto align-items-center"><img src="assets/images/Slack_Mark.svg" width="48" alt="slack" /> Slack</h2>
+  <p class="lead measure-lead mx-auto text-black-70 mb-32pt">Also, you can join our Slack workspaces to discuss the LearnPlus themes with others. We also jump into the channels time to time to further improve the discussions and answer general questions.</p>
+
+  <a href="https://join.slack.com/t/learnplus-bootstrap/shared_invite/enQtNDg0ODc3NjAzNTM5LTlhODNmZWMyNmRjOTE0ZTBmZGYzZTgyMmEzNDAyOTkyYzllZmJlYzg1NGUwMjQ1N2IxYzAyMDc0NjViZTVjZDg" target="_blank" class="measure-lead mx-auto d-block bg-dark p-3 text-white-50 rounded mb-3 text-decoration-0 d-flex align-items-center text-left">
+    <img src="assets/images/Bootstrap_logo.svg" alt="Bootstrap" width="32" class="mr-3" />
+    <span class="flex">
+      Join <strong class="text-white-70">#learnplus-bootstrap</strong> to discuss the <strong class="text-white-70">Bootstrap</strong> version
+    </span>
+  </a>
+  <a href="https://join.slack.com/t/learnplus-vue/shared_invite/enQtNDg1MTk1ODAyNzg5LTc3MDQ1NWRlZDZlODcxOGFjNGU3ZWM3MTA3NDdmMGE1NGU0NTZiNjkyOGMxZmE2Y2VhOGVlZTI0YWEzNTVjYTM" target="_blank" class="measure-lead mx-auto d-block bg-dark p-3 text-white-50 rounded text-decoration-0 d-flex align-items-center text-left">
+    <img class="mr-3" src="assets/images/Vue.js_Logo_2.svg" width="32" alt="Vue" />
+    <span class="flex">
+      Join <strong class="text-white-70">#learnplus-vue</strong> to discuss the <strong class="text-white-70">Vue</strong> version</a>
+    </span>
+</div>
+{% endblock %}

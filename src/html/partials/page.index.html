@@ -1,0 +1,126 @@
+<div class="bg-gradient-primary py-32pt py-lg-64pt">
+  <div class="{{ containerClass }} page__container">
+    <div class="hero mb-32pt">
+      <div class="row">
+        <div class="col-md-auto text-center text-sm-left mb-24pt mb-sm-0">
+          <h1 class="text-white">LearnPlus</h1>
+          <p class="lead measure-lead-max text-white-50 mb-0">A beautifully crafted user interface for modern Learning web applications, with examples for all the website pages possibly needed for a LMS application, covering the most important roles &mdash; the <strong class="text-white-70">student</strong> and the <strong class="text-white-70">instructor</strong>.</p>
+        </div>
+        <div class="col-md d-flex">
+          <div class="d-inline-flex mx-auto align-items-center">
+            <div class="avatar avatar-lg mr-3">
+              <img src="assets/images/logo/bootstrap.svg" alt="LearnPlus" class="avatar-img" />
+            </div>
+            <div class="flex">
+              <h4 class="text-white mb-0">Bootstrap</h4>
+              <span class="badge badge-primary">v4.1.3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-sm border-0 mb-md-0">
+          <a href="student.html" class="preview">
+            <img src="assets/images/choose/student.png" alt="Student App" class="img-fluid">
+          </a>
+          <div class="card-body text-center">
+            <a class="text-body" href="student.html"><strong>Student Pages</strong></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-sm border-0 mb-md-0">
+          <a href="instructor.html" class="preview">
+            <img src="assets/images/choose/instructor.png" alt="Instructor App" class="img-fluid">
+          </a>
+          <div class="card-body text-center">
+            <a class="text-body" href="instructor.html"><strong>Instructor Pages</strong></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include 'layouts/_navbar.secondary.html' %}
+{% import 'components/hljs.html' as hljs %}
+
+<div class="py-32pt py-lg-64pt {{ containerClass }} page__container">
+  <h2>Great Kick-starter</h2>
+
+  <h4>LearnPlus Bootstrap is a great kick-starter</h4>
+  <p class="text-black-70 lead measure-lead-max">With the included pages, LearnPlus Bootstrap is a great starting point for your next learning project. Don’t loose precious time trying to design or structure your pages, pick an existing one and start coding your logic right away.</p>
+
+  <h4>Fast prototyping</h4>
+  <p class="text-black-70 lead measure-lead-max"><strong>LearnPlus Bootstrap includes final HTML.</strong> BUT it also includes Nunjucks — a rich and powerful templating language for JavaScript with block inheritance, autoescaping, macros, asynchronous control, and more — by Mozilla.</p>
+
+  <div class="card card-body bg-dark">{% call hljs.component(type="django") -%}{% raw %}---
+title: Instructor Dashboard
+slug: instructor-dashboard
+prefix: instructor-
+---
+{% extends "layouts/instructor/fluid.html" %}{% endraw %}
+{%- endcall %}
+  </div>
+
+  <p class="text-black-70 measure-paragraph-max">Inside the LearnPlus Bootstrap package you will find source files writen in Nunjucks for layouts, pages, partials and components which makes prototyping blazing fast.</p>
+</div>
+
+{% set features = [{
+  title: "Bootstrap",
+  description: "Built with the latest stable release of Bootstrap v4.1.3"
+}, {
+  title: "Free Updates",
+  description: "Free lifetime updates including features and bug fixes"
+}, {
+  title: "Premium Support",
+  description: "6 months included support from our experienced team with extras available"
+}, {
+  title: "Sketch Included",
+  description: '20+ layered and well-organized Sketch Artboards - <span class="badge badge-dark">coming soon</span>',
+  disabled: true
+}, {
+  title: "RTL Optimized",
+  description: "right-to-left text direction just as good as left-to-right"
+}] %}
+
+<div class="bg-white border-bottom-2 border-top-2">
+  <div class="py-32pt pt-lg-64pt pb-lg-48pt {{ containerClass }} page__container">
+    <div class="row">
+      {% for item in features %}
+      <div class="col-sm-6 col-md-4">
+        <div class="media"{% if item.disabled %} style="opacity: .6"{% endif %}>
+          <div class="avatar mr-3">
+            <span class="avatar-title rounded-circle">
+              <i class="material-icons">adjust</i>
+            </span>
+          </div>
+          <div class="flex">
+            <strong class="text-black-70">{{ item.title }}</strong>
+            <p class="text-black-50">{{ item.description | safe }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="py-32pt py-lg-64pt {{ containerClass }} page__container">
+  <div class="row text-center">
+    <div class="col-md-6">
+      <h2>Student</h2>
+      <p class="lead measure-lead text-black-70">A collection of 14 website pages designed to provide students with a complete online learning experience. Inspired from the most popular learning platforms on the web today.</p>
+      <a href="instructor.html" class="btn btn-outline-dark">Student Pages</a>
+    </div>
+    <div class="col-md-6">
+      <h2>Instructor</h2>
+      <p class="lead measure-lead text-black-70">A collection of 10 website pages designed to provide teachers with a complete publishing platform for learning. Inspired from the most popular learning platforms on the web today.</p>
+      <a href="instructor.html" class="btn btn-outline-dark">Instructor Pages</a>
+    </div>
+  </div>
+
+</div>

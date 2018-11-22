@@ -1,0 +1,29 @@
+<div class="page__header page__header-nav page__header--shadow bg-white">
+  <div class="{{ containerClass }} page__container">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-light m-0 p-0">
+      <ul class="nav navbar-nav">
+        <li class="nav-item{% if slug === 'index' %} active{% endif %}">
+          <a class="nav-link" href="index.html">Features</a>
+        </li>
+        <li class="nav-item dropdown{% if 'student' in slug or 'instructor' in slug %} active{% endif %}">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Demos</a>
+          <div class="dropdown-menu">
+            <a href="student.html" class="dropdown-item{% if slug === 'learnplus-student' %} active{% endif %}">Student</a>
+            <a href="instructor.html" class="dropdown-item{% if slug === 'learnplus-instructor' %} active{% endif %}">Instructor</a>
+            <a href="" class="dropdown-item">Other</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown{% if 'components' in slug %} active{% endif %}">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Components</a>
+          <div class="dropdown-menu">
+            <a href="components-bootstrap.html" class="dropdown-item{% if slug === 'learnplus-components-bootstrap' %} active{% endif %}">Bootstrap</a>
+            <a href="components.html" class="dropdown-item{% if slug === 'learnplus-components' %} active{% endif %}">LearnPlus</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</div>

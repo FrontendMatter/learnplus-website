@@ -1,0 +1,51 @@
+{% set base_layout = base_layout or 'layouts/fixed.html' %}
+{% set release_version = release_version or 'Version' %}
+{% extends base_layout %}
+
+{% block page %}
+<div class="{{ containerClass }} page__container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item active">Changelog</li>
+  </ol>
+
+  <div class="d-flex flex-column flex-sm-row flex-wrap mb-headings align-items-start align-items-sm-center">
+    <div class="flex mb-2 mb-sm-0">
+      <h1 class="h2">LearnPlus {{ release_version }}</h1>
+      <span class="text-muted">Released on {{ release_date or '' }}</span>
+    </div>
+
+    <div class="dropdown">
+      <a class="btn btn-white dropdown-toggle" data-toggle="dropdown" href="#">{{ release_version }}</a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item{% if slug === 'changelog' %} active{% endif %}" href="{{ prefix.replace('student-', '').replace('instructor-', '') }}changelog.html">v4.0.0 - 17 Nov 2018</a>
+        <a class="dropdown-item{% if slug === 'changelog-v3.1.1' %} active{% endif %}" href="{{ prefix.replace('student-', '').replace('instructor-', '') }}changelog-v3.1.1.html">v3.1.1 - 24 Aug 2018</a>
+        <a class="dropdown-item{% if slug === 'changelog-v3.1.0' %} active{% endif %}" href="{{ prefix.replace('student-', '').replace('instructor-', '') }}changelog-v3.1.0.html">v3.1.0 - 14 Dec 2017</a>
+        <a class="dropdown-item{% if slug === 'changelog-v3.0.0' %} active{% endif %}" href="{{ prefix.replace('student-', '').replace('instructor-', '') }}changelog-v3.0.0.html">v3.0.0 - 8 Dec 2017</a>
+        <a class="dropdown-item{% if slug === 'changelog-v2.0.0' %} active{% endif %}" href="{{ prefix.replace('student-', '').replace('instructor-', '') }}changelog-v2.0.0.html">v2.0.0 - 11 Nov 2016</a>
+        <a class="dropdown-item{% if slug === 'changelog-v1.0.1' %} active{% endif %}" href="{{ prefix.replace('student-', '').replace('instructor-', '') }}changelog-v1.0.1.html">v1.0.1 - 18 Mar 2016</a>
+        <a class="dropdown-item disabled" href="javascript:void(0)">v1.0.0 - Initial Release</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-9">
+      {{ super() }}
+    </div>
+    <div class="col-lg-3 page-nav" data-perfect-scrollbar id="changelog-nav">
+      <div class="page-section pt-lg-32pt">
+        <nav class="nav page-nav__menu">
+          {% block page_nav_menu %}
+            {% include 'partials/page_nav_menu.' + slug + '.html' ignore missing %}
+          {% endblock %}
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+  {% include 'partials/footer.changelog.html' %}
+{% endblock %}

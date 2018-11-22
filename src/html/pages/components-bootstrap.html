@@ -1,0 +1,98 @@
+---
+title: LearnPlus - Bootstrap Components
+slug: components-bootstrap
+bodyClass: layout-sticky-subnav
+---
+{% extends "layouts/fixed.html" %}
+
+{% block page %}
+<div class="bg-gradient-primary py-32pt py-lg-64pt">
+  <div class="{{ containerClass }} page__container">
+    <div class="hero text-center">
+      <div class="d-inline-flex align-items-center mb-24pt">
+        <div class="avatar mr-3">
+          <img src="assets/images/logo/bootstrap.svg" alt="Bootstrap" class="avatar-img" />
+        </div>
+        <span class="badge badge-primary">v4.1.3</span>
+      </div>
+      <h1 class="text-white">Bootstrap components</h1>
+      <p class="lead measure-lead-max mx-auto text-white-50">In addition to the custom LearnPlus Components, LearnPlus includes support for all default Bootstrap 4. View all components at the official Bootstrap Documentation.</p>
+    </div>
+  </div>
+</div>
+
+{% include 'layouts/_navbar.secondary.html' %}
+
+<div class="py-32pt text-center {{ containerClass }} page__container">
+  
+  {% set components = [
+    {
+      description: "Tables",
+      image: "assets/images/choose/components/tables.svg",
+      href: "ui-tables.html"
+    },
+    {
+      description: "Forms",
+      image: "assets/images/choose/components/forms.svg",
+      href: "ui-forms.html"
+    },
+    {
+      description: "Cards",
+      image: "assets/images/choose/components/cards.svg",
+      href: "ui-cards.html"
+    },
+    {
+      description: "Tabs",
+      image: "assets/images/choose/components/tabs.svg",
+      href: "ui-tabs.html"
+    },
+    {
+      description: "Alerts",
+      image: "assets/images/choose/components/alerts.svg",
+      href: "ui-alerts.html"
+    },
+    {
+      description: "Badges",
+      image: "assets/images/choose/components/badges.svg",
+      href: "ui-badges.html"
+    },
+    {
+      description: "Breadcrumb",
+      image: "assets/images/choose/components/breadcrumb.svg",
+      href: "#"
+    },
+    {
+      description: "Buttons",
+      image: "assets/images/choose/components/buttons.svg",
+      href: "ui-buttons.html"
+    },
+    {
+      description: "Progress",
+      image: "assets/images/choose/components/progress.svg",
+      href: "ui-progress.html"
+    }
+  ] %}
+  
+  <div class="row">
+    {% for item in components %}
+    <div class="col-sm-6 col-md-4">
+      <a href="{{ item.href }}" target="_blank" class="d-block-inline card card-sm text-decoration-0">
+        {% if item.image %}
+        <img src="{{ item.image }}" alt="{{ item.description }}" class="img-fluid">
+        {% endif %}
+        <span class="d-block card-body text-body">
+          <strong>
+            {% if item.description %}
+              {{ item.description | safe }}
+            {% else %}
+              {{ item | safe }}
+            {% endif %}
+          </strong>
+        </span>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock %}

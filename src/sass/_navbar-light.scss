@@ -1,0 +1,51 @@
+//////////////////
+// NAVBAR LIGHT //
+//////////////////
+
+.navbar-light {
+
+	color: $navbar-light-text-color;
+
+	///////////
+	// BRAND //
+	///////////
+	
+	.navbar-brand {
+		color: $navbar-light-brand-color;
+		.material-icons {
+			color: $primary;
+		}
+	}
+
+	/////////////////
+	// SEARCH FORM //
+	/////////////////
+	
+	.navbar-search-form {
+		.form-control {
+			background: rgba(0, 0, 0, .05);
+			border-color: transparent;
+			&::placeholder {
+				color: rgba(0, 0, 0, .5);
+			}
+			&:focus {
+				background: #fff;
+				border: 1px solid $primary;
+			}
+		}
+		.btn {
+			background: transparent;
+			color: rgba(0, 0, 0, .5);
+			&:hover,
+			&:active,
+			&:focus {
+				color: $primary;
+				outline: none;
+			}
+		}
+	}
+
+	.nav-stats {
+		background: rgba(#262D33, .05);
+	}
+}

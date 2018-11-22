@@ -1,0 +1,62 @@
+<div class="card" id="packages">
+  <div class="card-body">
+    <h4>Packages</h4>
+    <ul>
+      <li>update <a href="https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.5">bootstrap</a> to v4.0.0-alpha.5 (<a href="https://github.com/twbs/bootstrap/issues/20630">see details</a>)</li>
+      <li>remove <a href="https://github.com/themekit/adminplus">adminplus</a></li>
+      <li>remove <a href="https://github.com/themekit/bootstrap-layout">bootstrap-layout</a></li>
+      <li>add <a href="https://github.com/themekit/material-design-kit">material-design-kit</a> (replaces bootstrap-layout)</li>
+      <li>add <a href="https://github.com/themekit/dom-factory">dom-factory</a> (component system to enhance HTML elements using plain JavaScript objects)</li>
+      <li>add <a href="https://github.com/themekit/sidebar-collapse">sidebar-collapse</a> (simple collapsible sidebar submenus)</li>
+      <li>add <a href="https://github.com/themekit/sidebar-style-guide">sidebar-style-guide</a> (sidebar navigation style guide - CSS and Sass)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="fixes">
+  <div class="card-body">
+    <h4>Fixes</h4>
+    <ul>
+      <li>remove sidebar menu icon (bootstrap v1.0.0-alpha.5 adds the icon using a background SVG)</li>
+      <li>replace <code>.img-circle</code> class with <code>.rounded-circle</code> (bootstrap v1.0.0-alpha.5)</li>
+      <li>replace <code>.img-rounded</code> class with <code>.rounded</code> (bootstrap v1.0.0-alpha.5)</li>
+      <li>add <code>.breadcrumb-item</code> class to <code>.breadcrumb</code> list items (bootstrap v1.0.0-alpha.5)</li>
+      <li>replace spacing helper classes <code>.(m|p)-([a-z])-([0-9+])</code> with <code>.$1$2-$3</code> (i.e. <code>.m-b-0</code> with <code>.mb-0</code>, etc) (bootstrap v1.0.0-alpha.5)</li>
+      <li>replace <code>.label</code> classes (i.e. <code>.label</code> with <code>.tag</code>, <code>.label-default</code> with <code>.tag-default</code>, <code>.label-pill</code> with <code>.tag-pill</code>, etc) (bootstrap v1.0.0-alpha.5)</li>
+      <li>replace column ordering helper classes <code>.col-([a-z]+)-(push|pull|offset)-([0-9])</code> with <code>.$2-$1-$3</code> (i.e. <code>.col-md-offset-3</code> with <code>.offset-md-3</code>) (bootstrap v4.0.0-alpha.5)</li>
+      <li>replace <code>.p-a-([0-9]+)</code> helper classes with <code>.p-$1</code> (bootstrap v4.0.0-alpha.5)</li>
+      <li>replace <code>.m-a-([0-9]+)</code> helper classes with <code>.m-$1</code> (bootstrap v4.0.0-alpha.5)</li>
+      <li>update bootstrap css helper classes in <code>fullcalendar.js</code> example (bootstrap v4.0.0-alpha.5)</li>
+      <li>update bootstrap forms and custom forms (bootstrap v4.0.0-alpha.5)</li>
+      <li>replace bootstrap’s <code>.pull-([a-z]+)-([a-z]+)</code> helper classes with <code>.float-$1-$2</code> (bootstrap v4.0.0-alpha.5)</li>
+      <li>reset <code>.list-group</code> z-index (fixes overlapping <code>.active.list-group-item</code>) (bootstrap v4.0.0-alpha.5)</li>
+      <li>reset <code>.input-group</code> z-index (fixes overlapping <code>.form-control</code>) (bootstrap v4.0.0-alpha.5)</li>
+      <li>reset <code>.custom-file</code> z-index (fixes overlapping <code>.custom-file-control</code>) (bootstrap v4.0.0-alpha.5)</li>
+      <li>remove navbar <code>line-height</code></li>
+      <li>fix instructor navbar stats color</li>
+      <li>fix missing Raphael dependency for morris charts (gulpfile)</li>
+      <li>fix instructor menu link to account settings</li>
+      <li>fix reply box on messages (student and instructor)</li>
+      <li>fix modal header color when using <code>.bg-primary</code></li>
+      <li>remove summernote border when directly a child of a <code>.card</code></li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="improvements">
+  <div class="card-body">
+    <h4>Improvements</h4>
+    <ul>
+      <li>add fixed layout variant for all pages</li>
+      <li>add footer margin on fixed layout</li>
+      <li>add <code>.chart</code> class for chart containers (resets <code>z-index</code> to fix overlapping tooltip) (i.e. when using morris + drawer with scrim enabled)</li>
+      <li>improve formatting of JS &amp; Sass examples</li>
+      <li>cleanup Sass (general)</li>
+      <li>upgrade layouts, sidebars &amp; navbars to material-design-kit</li>
+      <li>improve formatting of HTML source files</li>
+      <li>improve gulpfile</li>
+      <li>add lite-server (<code>npm start</code> or <code>npm run serve</code>)</li>
+      <li>run <code>gulp</code> automatically on <code>npm start</code></li>
+    </ul>
+  </div>
+</div>

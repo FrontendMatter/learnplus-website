@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark m-0 p-sm-0">
+  <div class="{{ navbarContainerClass or containerClass }}">
+
+    <!-- Brand -->
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/logo/white.svg" class="mr-2" alt="LearnPlus" />
+      LearnPlus
+    </a>
+
+    <button class="navbar-toggler navbar-toggler-right mr-0" data-toggle="collapse" data-target="#navbarsExample03" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarsExample03">
+      <ul class="nav navbar-nav ml-sm-2 flex-nowrap mr-auto" style="white-space: nowrap;">
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+            <img src="assets/images/logo/bootstrap.svg" alt="Bootstrap" width="24" class="mr-2" />
+            Bootstrap
+          </a>
+          <div class="dropdown-menu dropdown-menu-dark">
+            <a href="javascript:void(0)" class="dropdown-item">
+              <img src="assets/images/Vue.js_Logo_2.svg" alt="Vue" width="24" class="mr-2" />
+              Vue <span class="badge ml-2">coming soon</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-nowrap" style="white-space: nowrap;">
+        <li class="nav-item{% if 'community' in slug %} active{% endif %}">
+          <a href="community.html" class="nav-link">
+            <span>Get Help</span>
+            <i class="material-icons ml-2">face</i>
+          </a>
+        </li>
+        <li class="nav-item pt-3 pt-sm-0">
+          <a href="https://themeforest.net/item/learnplus-learning-management-application/15287372?ref=mosaicpro" class="btn btn-success btn-block btn-rounded" target="_blank">
+            Buy theme <i class="material-icons ml-2">shopping_cart</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- // END Collapse -->
+  </div>
+</nav>
