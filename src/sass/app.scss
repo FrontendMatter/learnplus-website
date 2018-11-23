@@ -8,3 +8,24 @@
 @import './custom-checkbox-toggle';
 @import './avatar';
 @import './learnplus';
+
+.feature-tabs {
+  .card {
+    font-weight: 500;
+    transition: all .3s;
+  }
+  .active {
+    box-shadow: none;
+    border-color: transparent;
+    background-color: transparent;
+    a {
+      color: $primary;
+    }
+  }
+  .card:not(.active) {
+    color: rgba($body-color, .5);
+    .feature-tabs__icon {
+      opacity: .7;
+    }
+  }
+}

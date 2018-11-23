@@ -8,5 +8,9 @@ import 'ui-learnplus-bootstrap/js/dropdown'
   ///////////////////////////////////
   // Custom JavaScript can go here //
   ///////////////////////////////////
+  
+  $('[data-toggle="tab"]').on('hide.bs.tab', function (e) {
+    $(e.target).removeClass('active')
+  })
 
 })()
