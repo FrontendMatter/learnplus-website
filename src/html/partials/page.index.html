@@ -64,6 +64,18 @@
       </a>
     </div>
     <div class="col-auto col-lg">
+      <a 
+        href="#templating"
+        aria-controls="templating"
+        data-toggle="tab" 
+        role="tab" 
+        aria-selected="false"
+        class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3">
+        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/prototype.svg" alt="Templating"></span>
+        Templating
+      </a>
+    </div>
+    <div class="col-auto col-lg">
       <a
         href="#"
         data-toggle="tab" 
@@ -103,11 +115,11 @@
         role="tab" 
         aria-selected="false"
         class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3">
-        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/rocket.svg" alt="Components"></span>
+        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/components.svg" alt="Components"></span>
         Components
       </a>
     </div>
-    <div class="col-auto col-lg">
+    <!-- <div class="col-auto col-lg">
       <a 
         href="#"
         data-toggle="tab" 
@@ -117,7 +129,7 @@
         <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/skins.svg" alt="Skins"></span>
         Skins
       </a>
-    </div>
+    </div> -->
   </div>
 
   <div class="tab-content">
@@ -125,11 +137,14 @@
 
       <h4>LearnPlus Bootstrap is a great kick-starter</h4>
       <p class="text-black-70 lead measure-lead-max">With the included pages, LearnPlus Bootstrap is a great starting point for your next learning project. Don’t loose precious time trying to design or structure your pages, pick an existing one and start coding your logic right away.</p>
+    
+    </div>
+    <div class="tab-pane" id="templating">
 
       <h4>Fast prototyping</h4>
       <p class="text-black-70 lead measure-lead-max"><strong>LearnPlus Bootstrap includes final HTML.</strong> BUT it also includes Nunjucks — a rich and powerful templating language for JavaScript with block inheritance, autoescaping, macros, asynchronous control, and more — by Mozilla.</p>
 
-      <div class="card card-body bg-dark">{% call hljs.component(type="django") -%}{% raw %}---
+      <div class="card measure-lead-max card-body bg-dark">{% call hljs.component(type="django") -%}{% raw %}---
 title: Instructor Dashboard
 slug: instructor-dashboard
 prefix: instructor-
@@ -159,10 +174,28 @@ prefix: instructor-
 }, {
   title: "Sketch Included",
   description: '20+ layered and well-organized Sketch Artboards - <span class="badge badge-dark">coming soon</span>',
+  icon: "assets/images/icon/sketch.svg",
   disabled: true
 }, {
   title: "RTL Optimized",
-  description: "right-to-left text direction just as good as left-to-right"
+  description: "right-to-left text direction just as good as left-to-right",
+  icon: "assets/images/icon/rtl.svg"
+}, {
+  title: "Great Kick-starter",
+  description: "Start coding your application logic right away",
+  icon: "assets/images/icon/rocket.svg"
+}, {
+  title: "Template Layouts",
+  description: "Fixed and fluid layouts for various use-cases",
+  icon: "assets/images/icon/template.svg"
+}, {
+  title: "Fast Prototyping",
+  description: "Write HTML in a powerful templating language for JavaScript",
+  icon: "assets/images/icon/prototype.svg"
+}, {
+  title: "Components",
+  description: "Custom Bootstrap plus many extra Components for learning apps",
+  icon: "assets/images/icon/components.svg"
 }] %}
 
 <div class="bg-white border-bottom-2 border-top-2">
