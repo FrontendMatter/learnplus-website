@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="160" viewBox="0 0 200 160">
+  <defs>
+    <rect id="pages-utility-a" width="200" height="160" rx="2"/>
+    <rect id="pages-utility-c" width="96" height="96" rx="1"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="pages-utility-b" fill="#fff">
+      <use xlink:href="#pages-utility-a"/>
+    </mask>
+    <use fill="#39444D" fill-rule="nonzero" xlink:href="#pages-utility-a"/>
+    <g mask="url(#pages-utility-b)">
+      <g transform="translate(52 32)">
+        <mask id="pages-utility-d" fill="#fff">
+          <use xlink:href="#pages-utility-c"/>
+        </mask>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M17,10 L79,10 C79.5522847,10 80,10.4477153 80,11 L80,85 C80,85.5522847 79.5522847,86 79,86 L17,86 C16.4477153,86 16,85.5522847 16,85 L16,11 C16,10.4477153 16.4477153,10 17,10 Z M16,23 L80,23" mask="url(#pages-utility-d)"/>
+        <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M27 42L43 42C43.5522847 42 44 42.4477153 44 43L44 63C44 63.5522847 43.5522847 64 43 64L27 64C26.4477153 64 26 63.5522847 26 63L26 43C26 42.4477153 26.4477153 42 27 42zM26 57L44 57 26 57zM53 42L69 42C69.5522847 42 70 42.4477153 70 43L70 63C70 63.5522847 69.5522847 64 69 64L53 64C52.4477153 64 52 63.5522847 52 63L52 43C52 42.4477153 52.4477153 42 53 42zM52 57L70 57 52 57zM26 71L44 71M29 77L41.2187386 77M55 77L67.2187386 77M52 71L70 71M31 30L31 36 31 30zM65 30L65 36 65 30zM27 30L69 30C69.5522847 30 70 30.4477153 70 31L70 35C70 35.5522847 69.5522847 36 69 36L27 36C26.4477153 36 26 35.5522847 26 35L26 31C26 30.4477153 26.4477153 30 27 30zM25 17L33 17M37 17L45 17" mask="url(#pages-utility-d)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
   <div class="{{ containerClass }} page__container">
     <div class="hero mb-32pt">
       <div class="row">
-        <div class="col-md-auto text-center text-sm-left mb-24pt mb-sm-0">
+        <div class="col-md-auto text-center text-sm-left mb-24pt mb-lg-0">
           <h1 class="text-white">LearnPlus</h1>
           <p class="lead measure-lead-max text-white-50 mb-0">A beautifully crafted user interface for modern Learning web applications, with examples for all the website pages possibly needed for a LMS application, covering the most important roles &mdash; the <strong class="text-white-70">student</strong> and the <strong class="text-white-70">instructor</strong>.</p>
         </div>
@@ -48,113 +48,172 @@
 {% include 'layouts/_navbar.secondary.html' %}
 {% import 'components/hljs.html' as hljs %}
 
-<div class="py-32pt py-lg-64pt {{ containerClass }} page__container">
+<div class="py-32pt pb-lg-64pt {{ containerClass }} page__container">
 
-  <div class="nav row mb-16pt feature-tabs" role="tablist">
-    <div class="col-auto">
+  {% set features = [{
+    active: true,
+    id: "kick-starter",
+    title: "Great Kick-starter",
+    icon: "assets/images/icon/rocket.svg",
+    wrapper: "col-auto"
+  }, {
+    id: "templating",
+    title: "Templating",
+    icon: "assets/images/icon/prototype.svg"
+  }, {
+    id: "layouts",
+    title: "Layouts",
+    icon: "assets/images/icon/template.svg"
+  }, {
+    id: "navigation",
+    title: "Navigation",
+    icon: "assets/images/icon/navigation.svg"
+  }, {
+    id: "pages",
+    title: "Pages",
+    icon: "assets/images/icon/pages.svg"
+  }, {
+    id: "components",
+    title: "Components",
+    icon: "assets/images/icon/components.svg"
+  }] %}
+
+  <div class="nav row feature-tabs mb-16pt" role="tablist">
+    {% for item in features %}
+    <div class="{{ item.wrapper or 'col-auto col-lg' }}">
       <a 
-        href="#kick-starter"
-        aria-controls="kick-starter"
+        href="#{{ item.id }}"
+        aria-controls="{{ item.id }}"
         data-toggle="tab" 
         role="tab" 
-        aria-selected="true"  
-        class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3 active">
-        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/rocket.svg" alt="Great Kick-starter"></span>
-        Great Kick-starter
+        aria-selected="{{ item.active or 'false' }}" 
+        class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3{% if item.active %} active{% endif %}">
+        <span class="feature-tabs__icon mb-2"><img src="{{ item.icon }}" alt="{{ item.title }}"></span>
+        {{ item.title }}
       </a>
     </div>
-    <div class="col-auto col-lg">
-      <a 
-        href="#templating"
-        aria-controls="templating"
-        data-toggle="tab" 
-        role="tab" 
-        aria-selected="false"
-        class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3">
-        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/prototype.svg" alt="Templating"></span>
-        Templating
-      </a>
-    </div>
-    <div class="col-auto col-lg">
-      <a
-        href="#"
-        data-toggle="tab" 
-        role="tab" 
-        aria-selected="false" 
-        class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3">
-        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/template.svg" alt="Template Layouts"></span>
-        Layouts
-      </a>
-    </div>
-    <div class="col-auto col-lg">
-      <a 
-        href="#"
-        data-toggle="tab" 
-        role="tab" 
-        aria-selected="false" 
-        class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3">
-        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/navigation.svg" alt="Navigation"></span>
-        Navigation
-      </a>
-    </div>
-    <div class="col-auto col-lg">
-      <a 
-        href="#"
-        data-toggle="tab" 
-        role="tab" 
-        aria-selected="false"
-        class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3">
-        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/pages.svg" alt="Pages"></span>
-        Pages
-      </a>
-    </div>
-    <div class="col-auto col-lg">
-      <a 
-        href="#"
-        data-toggle="tab" 
-        role="tab" 
-        aria-selected="false"
-        class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3">
-        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/components.svg" alt="Components"></span>
-        Components
-      </a>
-    </div>
-    <!-- <div class="col-auto col-lg">
-      <a 
-        href="#"
-        data-toggle="tab" 
-        role="tab" 
-        aria-selected="false"
-        class="card card-body text-center d-flex flex-column text-decoration-0 pb-2 px-24pt pt-3">
-        <span class="feature-tabs__icon mb-2"><img src="assets/images/icon/skins.svg" alt="Skins"></span>
-        Skins
-      </a>
-    </div> -->
+    {% endfor %}
   </div>
 
   <div class="tab-content">
     <div class="tab-pane active" id="kick-starter">
 
-      <h4>LearnPlus Bootstrap is a great kick-starter</h4>
-      <p class="text-black-70 lead measure-lead-max">With the included pages, LearnPlus Bootstrap is a great starting point for your next learning project. Don’t loose precious time trying to design or structure your pages, pick an existing one and start coding your logic right away.</p>
+      <div class="row">
+        <div class="col-12 col-lg">
+          <h4>Great Kick-starter</h4>
+          <p class="text-black-70 lead measure-lead-max">With the included pages, LearnPlus Bootstrap is a great starting point for your next learning project.</p>
+          <p class="text-black-70 lead measure-lead-max">Don’t loose precious time trying to design or structure your pages, pick an existing one and start coding your logic right away.</p>
+        </div>
+        <div class="col-12 col-lg-auto">
+          <img class="rounded" style="max-width: 100%;" src="assets/images/preview/student-dashboard-dark.svg" alt="Student Dashboard - Dark">
+        </div>
+      </div>
     
     </div>
     <div class="tab-pane" id="templating">
 
-      <h4>Fast prototyping</h4>
-      <p class="text-black-70 lead measure-lead-max"><strong>LearnPlus Bootstrap includes final HTML.</strong> BUT it also includes Nunjucks — a rich and powerful templating language for JavaScript with block inheritance, autoescaping, macros, asynchronous control, and more — by Mozilla.</p>
-
-      <div class="card measure-lead-max card-body bg-dark">{% call hljs.component(type="django") -%}{% raw %}---
+      <div class="row">
+        <div class="col-12 col-lg">
+          <h4>Fast prototyping</h4>
+          <p class="text-black-70 lead measure-lead-max"><strong>LearnPlus Bootstrap includes final HTML.</strong> BUT it also includes Nunjucks — a rich and powerful templating language for JavaScript with block inheritance, autoescaping, macros, asynchronous control, and more — by Mozilla.</p>
+        </div>
+        <div class="col-12 col-lg-auto">
+          
+          <div class="card measure-lead-max card-body bg-dark">{% call hljs.component(type="django") -%}{% raw %}---
 title: Instructor Dashboard
 slug: instructor-dashboard
 prefix: instructor-
 ---
 {% extends "layouts/instructor/fluid.html" %}{% endraw %}
 {%- endcall %}
+          </div>
+
+          <p class="text-black-70 measure-paragraph-max">Inside the LearnPlus Bootstrap package you will find source files writen in Nunjucks for layouts, pages, partials and components which makes prototyping blazing fast.</p>
+
+        </div>
+      </div>
+    
+    </div>
+    <div class="tab-pane" id="layouts">
+
+      <div class="row">
+        <div class="col-12 col-lg">
+          <h4>Template Layouts</h4>
+          <p class="text-black-70 lead measure-lead-max">LearnPlus Bootstrap includes several template layout patterns to help speed up development of your learning management web application.</p>
+        </div>
+        <div class="col-12 col-lg-auto">
+          <div class="row justify-content-center justify-content-sm-start">
+            <div class="col-auto" style="max-width: calc(282px + .625rem * 2);">
+              <p><img src="assets/images/layout-fluid.svg" alt="Template Layout Fluid"></p>
+              <h4 class="mb-2">Layout Fluid</h4>
+              <p class="text-black-70 mb-sm-0">The default layout with side navigation and right-hand content area.</p>
+            </div>
+            <div class="col-auto" style="max-width: calc(282px + .625rem * 2);">
+              <p><img src="assets/images/layout-fixed.svg" alt="Template Layout Fixed"></p>
+              <h4 class="mb-2">Layout Fixed</h4>
+              <p class="text-black-70 mb-sm-0">Classic top navigation bar with page content below.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p class="text-black-70 measure-paragraph-max">Inside the LearnPlus Bootstrap package you will find source files writen in Nunjucks for layouts, pages, partials and components which makes prototyping blazing fast.</p>
-    
+    </div>
+    <div class="tab-pane" id="navigation">
+
+      <div class="row">
+        <div class="col-12 col-lg">
+          <h4>Template Navigation</h4>
+          <p class="text-black-70 lead measure-lead-max">LearnPlus Bootstrap includes several template navigation patterns to help speed up development of your learning management web application.</p>
+        </div>
+        <div class="col-12 col-lg-auto">
+          <div class="row justify-content-center justify-content-sm-start">
+            <div class="col-auto" style="max-width: calc(200px + .625rem * 2);">
+              <p><img src="assets/images/navigation-side.svg" alt="Navigation Side"></p>
+              <h4 class="mb-2">Navigation Side</h4>
+              <p class="text-black-70 mb-sm-0">The default layout with side navigation and right-hand content area.</p>
+            </div>
+            <div class="col-auto" style="max-width: calc(200px + .625rem * 2);">
+              <p><img src="assets/images/navigation-top.svg" alt="Navigation Top"></p>
+              <h4 class="mb-2">Navigation Top</h4>
+              <p class="text-black-70 mb-sm-0">Classic top navigation bar with page content below.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="tab-pane" id="pages">
+
+      <div class="row">
+        <div class="col-12 col-lg">
+          <h4>Template Pages</h4>
+          <p class="text-black-70 lead measure-lead-max">LearnPlus Bootstrap includes many page demos to help speed up development of your learning web application.</p>
+          <p class="text-black-70 lead measure-lead-max">Inspired from the most popular learning platforms on the web today.</p>
+        </div>
+        <div class="col-12 col-lg-auto">
+          <div class="row justify-content-center justify-content-sm-start">
+            <div class="col-auto" style="max-width: calc(200px + .625rem * 2);">
+              <p><img src="assets/images/pages-student.svg" alt="Student Template Pages"></p>
+              <h4 class="mb-2">Student</h4>
+              <p class="text-black-70 mb-sm-0">A collection of website pages designed to provide students with a complete online learning experience.</p>
+            </div>
+            <div class="col-auto" style="max-width: calc(200px + .625rem * 2);">
+              <p><img src="assets/images/pages-instructor.svg" alt="Instructor Template Pages"></p>
+              <h4 class="mb-2">Instructor</h4>
+              <p class="text-black-70 mb-sm-0">A collection of website pages designed to provide teachers with a complete publishing platform.</p>
+            </div>
+            <div class="col-auto" style="max-width: calc(200px + .625rem * 2);">
+              <p><img src="assets/images/pages-utility.svg" alt="Utility Template Pages"></p>
+              <h4 class="mb-2">Utility</h4>
+              <p class="text-black-70 mb-sm-0">Every website needs these pages. Forget about login, signup, forgot password and more. We’ve got it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="tab-pane" id="components">
+      
     </div>
   </div>
 </div>
@@ -198,7 +257,7 @@ prefix: instructor-
   icon: "assets/images/icon/components.svg"
 }] %}
 
-<div class="bg-white border-bottom-2 border-top-2">
+<div class="bg-white border-bottom-2 border-top-2 mb-32pt">
   <div class="py-32pt pt-lg-64pt pb-lg-48pt {{ containerClass }} page__container">
     <div class="row">
       {% for item in features %}
@@ -222,20 +281,4 @@ prefix: instructor-
       {% endfor %}
     </div>
   </div>
-</div>
-
-<div class="py-32pt py-lg-64pt {{ containerClass }} page__container">
-  <div class="row text-center">
-    <div class="col-md-6">
-      <h2>Student</h2>
-      <p class="lead measure-lead text-black-70">A collection of 14 website pages designed to provide students with a complete online learning experience. Inspired from the most popular learning platforms on the web today.</p>
-      <a href="instructor.html" class="btn btn-outline-dark">Student Pages</a>
-    </div>
-    <div class="col-md-6">
-      <h2>Instructor</h2>
-      <p class="lead measure-lead text-black-70">A collection of 10 website pages designed to provide teachers with a complete publishing platform for learning. Inspired from the most popular learning platforms on the web today.</p>
-      <a href="instructor.html" class="btn btn-outline-dark">Instructor Pages</a>
-    </div>
-  </div>
-
 </div>
