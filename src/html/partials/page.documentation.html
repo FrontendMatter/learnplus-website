@@ -1,0 +1,143 @@
+{% import 'components/hljs.html' as hljs %}
+
+<div id="demos">
+  <h2>Demos</h2>
+  <p class="text-black-70">Preview LearnPlus Bootstrap demos online or you can find the static files from our online demos in the <code>dist/</code> directory of the download package. You can open the precompiled demo from the download package:</p>
+
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="shell") -%}
+      open dist/index.html
+    {%- endcall %}
+  </div>
+
+  <p class="text-black-70">Or, start a web server:</p>
+
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="shell") -%}
+      npm run serve
+    {%- endcall %}
+  </div>
+</div>
+
+<div id="installation">
+  <h2>Installation</h2>
+  <p><a href="https://badge.fury.io/js/theme-mix" target="_blank" title="npm version"><img src="https://badge.fury.io/js/theme-mix.svg" alt="npm version"></a></p>
+
+  <p>LearnPlus Bootstrap includes a modern development workflow based on Webpack and laravel-mix which compiles Sass, ES6 JavaScript, Vue files, handles production builds, watchers, multiple CSS themes and more. This entire workflow is contained into an installable package named <a href="https://github.com/FrontendMatter/theme-mix" target="_blank">theme-mix</a>.</p>
+
+  <p class="text-black-70">The download package does not include any vendor libraries. To install all the dependencies, run:</p>
+
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="shell") -%}
+      npm install
+    {%- endcall %}
+  </div>
+
+  <p class="text-black-70">Create a <code>webpack.mix.js</code> file at the root of your project:</p>
+
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="js") -%}
+      require('theme-mix')
+    {%- endcall %}
+  </div>
+
+  <p class="text-black-70">Update <code>package.json</code> with the workflow:</p>
+
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="js") -%}
+"scripts": {
+  "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+  "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+  "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+},
+    {%- endcall %}
+  </div>
+</div>
+
+<div id="options">
+  <h2>Options</h2>
+  <p class="text-black-70">Create a <code>theme-mix.yaml</code> file at the root of your project. These are the default configuration options, except <code>copy</code> which by default is an empty list.:</p>
+
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="yaml") -%}
+runTasks:
+  clean: true
+  js: true
+  copy: true
+  sass: true
+  html: true
+enableCssThemes: false
+enableCssRTL: false
+copyCwd: node_modules
+copyDest: dist/assets/vendor
+copy:
+  - jquery/dist/jquery.min.js
+  - bootstrap/dist/js/bootstrap.min.*
+  - popper.js/dist/umd/popper.min.*
+  - dom-factory/dist/*
+  - material-design-kit/dist/material-design-kit.*
+  - material-design-icons-iconfont/dist/fonts/*.{eot,ttf,woff,woff2}: dist/assets/fonts/material-icons
+  - '@fortawesome/fontawesome-free/webfonts/*': dist/assets/fonts/fontawesome-free
+clean:
+  - dist/**/*.html
+  - dist/assets/{css,fonts,js,vendor}
+sassSrc: src/sass/**/*.scss
+cssDest: dist/assets/css
+jsSrc: src/js/**/**.js
+jsDest: dist/assets/js
+htmlDest: dist/[path][name].html
+htmllint: false
+laravelMixOptions:
+  processCssUrls: false
+browserSync:
+  port: 3000
+  files:
+    - ./dist/**/*.{html,css,js}
+  server:
+    baseDir: ./dist
+    index: student-dashboard.html
+  injectChanges: true
+  notify: false
+  ghostMode: false
+  logLevel: silent
+  proxy: null
+    {%- endcall %}
+  </div>
+</div>
+
+<div id="build">
+  <h2>Build</h2>
+  <p class="text-black-70">Development build:</p>
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="shell") -%}
+      npm run development
+    {%- endcall %}
+  </div>
+
+  <p class="text-black-70">Production build (includes extra minification, optimizations and cleanup):</p>
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="shell") -%}
+      npm run production
+    {%- endcall %}
+  </div>
+</div>
+
+<div id="watch">
+  <h2>Watch</h2>
+  <p class="text-black-70">Start a web server and automatically rebuild your changes as you make them:</p>
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="shell") -%}
+      npm run watch
+    {%- endcall %}
+  </div>
+</div>
+
+<div id="tasks">
+  <h2>Tasks</h2>
+  <p class="text-black-70">Run specific tasks</p>
+  <div class="card card-footer bg-dark">
+    {% call hljs.component(type="shell") -%}
+      npm run development -- --env.run [html|js|sass|copy|clean]
+    {%- endcall %}
+  </div>
+</div>

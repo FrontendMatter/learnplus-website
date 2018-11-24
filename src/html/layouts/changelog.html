@@ -1,9 +1,10 @@
 {% set base_layout = base_layout or 'layouts/fixed.html' %}
 {% set release_version = release_version or 'Version' %}
+{% set bodyClass = 'layout-sticky-subnav' %}
 {% extends base_layout %}
 
 {% block page %}
-<div class="bg-gradient-primary py-32pt py-lg-64pt">
+<div class="bg-gradient-primary py-32pt py-lg-64pt z-2">
   <div class="{{ containerClass }} page__container">
       
     <div class="d-flex flex-column flex-sm-row flex-wrap mb-headings align-items-start align-items-sm-center">
@@ -12,7 +13,7 @@
           <div class="avatar mr-2" style="opacity: .5">
             <img src="assets/images/icon/prototype/white.svg" alt="Changelog" class="avatar-img" />
           </div>
-          <h4 class="text-white-50">Changelog</h4>
+          <h4 class="text-white-50">{{ title }}</h4>
         </div>
         <h1 class="text-white">LearnPlus {{ release_version }}</h1>
         <p class="text-white-70 mb-sm-0">Released on {{ release_date or '' }}</p>
@@ -34,17 +35,28 @@
 
   </div>
 </div>
+
+{% include 'layouts/_navbar.documentation.html' %}
+
 <div class="py-32pt pb-lg-64pt {{ containerClass }} page__container">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    {% if 'changelog' in slug %}
+    <li class="breadcrumb-item"><a href="index.html">Documentation</a></li>
     <li class="breadcrumb-item active">Changelog</li>
+    {% else %}
+    <li class="breadcrumb-item active">Documentation</li>
+    {% endif %}
   </ol>
 
   <div class="row">
     <div class="col-lg-9">
       {{ super() }}
     </div>
-    <div class="col-lg-3 page-nav" data-perfect-scrollbar id="changelog-nav">
+    <div 
+      class="col-lg-3 page-nav" 
+      data-perfect-scrollbar 
+      id="changelog-nav">
       <div class="page-section pt-lg-32pt">
         <nav class="nav page-nav__menu">
           {% block page_nav_menu %}

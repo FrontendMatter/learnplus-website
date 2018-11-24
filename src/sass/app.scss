@@ -9,6 +9,18 @@
 @import './avatar';
 @import './learnplus';
 
+.z-2 {
+  position: relative;
+  z-index: 2;
+}
+
+@include media-breakpoint-up(lg) {
+  #changelog-nav {
+    top: 8rem; 
+    max-height: calc(100vh - 8rem);
+  }
+}
+
 .feature-tabs {
   .card {
     font-weight: 500;

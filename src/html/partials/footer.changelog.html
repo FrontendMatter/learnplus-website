@@ -3,15 +3,17 @@
 (function(){
   'use strict';
 
+  const nh = $('.navbar').height() * 2
+
   $('body').scrollspy({ 
     target: '#changelog-nav',
-    offset: $('#changelog-nav').offset().top + $('.navbar').height()
+    offset: $('#changelog-nav').offset().top - nh
   })
 
   $('#changelog-nav .nav-link').on('click', function(e) {
     e.preventDefault()
     const target = $(this).attr('href')
-    const scrollTop = $(target).offset().top - $('.navbar').height() - 20
+    const scrollTop = $(target).offset().top - nh - 20
     document.body.scrollTop = scrollTop
   })
 

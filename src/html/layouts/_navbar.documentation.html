@@ -1,0 +1,17 @@
+<div class="page__header page__header-nav page__header--shadow bg-white">
+  <div class="{{ containerClass }} page__container">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-light m-0 p-0">
+      <ul class="nav navbar-nav">
+        <li class="nav-item{% if slug === 'documentation' %} active{% endif %}">
+          <a class="nav-link" href="documentation.html">Documentation</a>
+        </li>
+        <li class="nav-item{% if 'changelog' in slug %} active{% endif %}">
+          <a class="nav-link" href="changelog.html">Release Notes</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
