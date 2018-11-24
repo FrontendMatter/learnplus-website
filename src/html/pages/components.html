@@ -25,73 +25,60 @@ bodyClass: layout-sticky-subnav
 
 <div class="py-32pt text-center {{ containerClass }} page__container">
   
-  {% set components = [
-    {
-      description: "Avatars",
-      image: "assets/images/choose/components/avatars.svg",
-      href: "ui-avatars.html"
-    },
-    {
-      description: "Icons",
-      image: "assets/images/choose/components/icons.svg",
-      href: "ui-icons.html"
-    },
-    {
-      description: "Loaders",
-      image: "assets/images/choose/components/loaders.svg",
-      href: "ui-loaders.html"
-    },
-    {
-      description: "Charts",
-      image: "assets/images/choose/components/charts.svg",
-      href: "ui-charts.html"
-    },
-    {
-      description: "Drag and Drop",
-      image: "assets/images/choose/components/drag.svg",
-      href: "ui-drag.html"
-    },
-    {
-      description: "Nestable",
-      image: "assets/images/choose/components/nestable.svg",
-      href: "ui-nestable.html"
-    },
-    {
-      description: "Tree",
-      image: "assets/images/choose/components/tree.svg",
-      href: "ui-tree.html"
-    },
-    {
-      description: "Toggle",
-      image: "assets/images/choose/components/toggle.svg",
-      href: "ui-forms.html"
-    },
-    {
-      description: "Search",
-      image: "assets/images/choose/components/search.svg",
-      href: "ui-forms.html"
-    },
-    {
-      description: "Merge Group",
-      image: "assets/images/choose/components/merge-group.svg",
-      href: "ui-forms.html"
-    },
-    {
-      description: "Flatpickr",
-      image: "assets/images/choose/components/flatpickr.svg",
-      href: "ui-forms.html"
-    },
-    {
-      description: "Rich Text Editor",
-      image: "assets/images/choose/components/quill.svg",
-      href: "ui-forms.html"
-    }
-  ] %}
+  {% set components = [{
+    description: "Avatars",
+    image: "assets/images/choose/components/avatars.svg",
+    href: "ui-avatars.html"
+  }, {
+    description: "Icons",
+    image: "assets/images/choose/components/icons.svg",
+    href: "ui-icons.html"
+  }, {
+    description: "Loaders",
+    image: "assets/images/choose/components/loaders.svg",
+    href: "ui-loaders.html"
+  }, {
+    description: "Charts",
+    image: "assets/images/choose/components/charts.svg",
+    href: "ui-charts.html"
+  }, {
+    description: "Drag and Drop",
+    image: "assets/images/choose/components/drag.svg",
+    href: "ui-drag.html"
+  }, {
+    description: "Nestable",
+    image: "assets/images/choose/components/nestable.svg",
+    href: "ui-nestable.html"
+  }, {
+    description: "Tree",
+    image: "assets/images/choose/components/tree.svg",
+    href: "ui-tree.html"
+  }, {
+    description: "Toggle",
+    image: "assets/images/choose/components/toggle.svg",
+    href: "ui-forms.html"
+  }, {
+    description: "Search",
+    image: "assets/images/choose/components/search.svg",
+    href: "ui-forms.html"
+  }, {
+    description: "Merge Group",
+    image: "assets/images/choose/components/merge-group.svg",
+    href: "ui-forms.html"
+  }, {
+    description: "Flatpickr",
+    image: "assets/images/choose/components/flatpickr.svg",
+    href: "ui-forms.html"
+  }, {
+    description: "Rich Text Editor",
+    image: "assets/images/choose/components/quill.svg",
+    href: "ui-forms.html"
+  }] %}
   
   <div class="row">
     {% for item in components %}
     <div class="col-sm-6 col-md-4">
-      <a href="{{ item.href }}" target="_blank" class="d-block-inline card card-sm text-decoration-0">
+      <a href="{{ demo_url }}{{ item.href }}" target="_blank" class="d-block-inline card card-sm text-decoration-0">
         {% if item.image %}
         <img src="{{ item.image }}" alt="{{ item.description }}" class="img-fluid">
         {% endif %}

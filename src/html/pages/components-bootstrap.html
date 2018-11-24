@@ -25,58 +25,48 @@ bodyClass: layout-sticky-subnav
 
 <div class="py-32pt text-center {{ containerClass }} page__container">
   
-  {% set components = [
-    {
-      description: "Tables",
-      image: "assets/images/choose/components/tables.svg",
-      href: "ui-tables.html"
-    },
-    {
-      description: "Forms",
-      image: "assets/images/choose/components/forms.svg",
-      href: "ui-forms.html"
-    },
-    {
-      description: "Cards",
-      image: "assets/images/choose/components/cards.svg",
-      href: "ui-cards.html"
-    },
-    {
-      description: "Tabs",
-      image: "assets/images/choose/components/tabs.svg",
-      href: "ui-tabs.html"
-    },
-    {
-      description: "Alerts",
-      image: "assets/images/choose/components/alerts.svg",
-      href: "ui-alerts.html"
-    },
-    {
-      description: "Badges",
-      image: "assets/images/choose/components/badges.svg",
-      href: "ui-badges.html"
-    },
-    {
-      description: "Breadcrumb",
-      image: "assets/images/choose/components/breadcrumb.svg",
-      href: "#"
-    },
-    {
-      description: "Buttons",
-      image: "assets/images/choose/components/buttons.svg",
-      href: "ui-buttons.html"
-    },
-    {
-      description: "Progress",
-      image: "assets/images/choose/components/progress.svg",
-      href: "ui-progress.html"
-    }
-  ] %}
+  {% set components = [{
+    description: "Tables",
+    image: "assets/images/choose/components/tables.svg",
+    href: "ui-tables.html"
+  }, {
+    description: "Forms",
+    image: "assets/images/choose/components/forms.svg",
+    href: "ui-forms.html"
+  }, {
+    description: "Cards",
+    image: "assets/images/choose/components/cards.svg",
+    href: "ui-cards.html"
+  }, {
+    description: "Tabs",
+    image: "assets/images/choose/components/tabs.svg",
+    href: "ui-tabs.html"
+  }, {
+    description: "Alerts",
+    image: "assets/images/choose/components/alerts.svg",
+    href: "ui-alerts.html"
+  }, {
+    description: "Badges",
+    image: "assets/images/choose/components/badges.svg",
+    href: "ui-badges.html"
+  }, {
+    description: "Breadcrumb",
+    image: "assets/images/choose/components/breadcrumb.svg",
+    href: "#"
+  }, {
+    description: "Buttons",
+    image: "assets/images/choose/components/buttons.svg",
+    href: "ui-buttons.html"
+  }, {
+    description: "Progress",
+    image: "assets/images/choose/components/progress.svg",
+    href: "ui-progress.html"
+  }] %}
   
   <div class="row">
     {% for item in components %}
     <div class="col-sm-6 col-md-4">
-      <a href="{{ item.href }}" target="_blank" class="d-block-inline card card-sm text-decoration-0">
+      <a href="{{ demo_url }}{{ item.href }}" target="_blank" class="d-block-inline card card-sm text-decoration-0">
         {% if item.image %}
         <img src="{{ item.image }}" alt="{{ item.description }}" class="img-fluid">
         {% endif %}

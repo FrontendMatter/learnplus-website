@@ -7,19 +7,19 @@
         <li class="nav-item{% if slug === 'index' %} active{% endif %}">
           <a class="nav-link" href="index.html">Features</a>
         </li>
-        <li class="nav-item dropdown{% if 'student' in slug or 'instructor' in slug %} active{% endif %}">
+        <li class="nav-item dropdown{% if 'student' in slug or 'instructor' in slug or 'utility' in slug %} active{% endif %}">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Demos</a>
           <div class="dropdown-menu">
-            <a href="student.html" class="dropdown-item{% if slug === 'learnplus-student' %} active{% endif %}">Student</a>
-            <a href="instructor.html" class="dropdown-item{% if slug === 'learnplus-instructor' %} active{% endif %}">Instructor</a>
-            <a href="" class="dropdown-item">Other</a>
+            <a href="student.html" class="dropdown-item{% if slug === 'student' %} active{% endif %}">Student</a>
+            <a href="instructor.html" class="dropdown-item{% if slug === 'instructor' %} active{% endif %}">Instructor</a>
+            <a href="utility.html" class="dropdown-item{% if slug === 'utility' %} active{% endif %}">Utility pages</a>
           </div>
         </li>
         <li class="nav-item dropdown{% if 'components' in slug %} active{% endif %}">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Components</a>
           <div class="dropdown-menu">
-            <a href="components-bootstrap.html" class="dropdown-item{% if slug === 'learnplus-components-bootstrap' %} active{% endif %}">Bootstrap</a>
-            <a href="components.html" class="dropdown-item{% if slug === 'learnplus-components' %} active{% endif %}">LearnPlus</a>
+            <a href="components-bootstrap.html" class="dropdown-item{% if slug === 'components-bootstrap' %} active{% endif %}">Bootstrap</a>
+            <a href="components.html" class="dropdown-item{% if slug === 'components' %} active{% endif %}">LearnPlus</a>
           </div>
         </li>
       </ul>
