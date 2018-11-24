@@ -17,5 +17,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-548938-35');
+  if (document.location.hostname != 'localhost') {
+    gtag('config', 'UA-548938-35');
+  }
 </script>

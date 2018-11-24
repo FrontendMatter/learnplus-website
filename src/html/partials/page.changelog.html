@@ -6,6 +6,7 @@
   <div class="card-body">
     <h4>Packages</h4>
     <ul>
+      <li>add ui-learnplus-bootstrap package</li>
       <li>upgrade bootstrap to v4.1.3</li>
       <li>upgrade chart.js to v2.7.3</li>
       <li>upgrade datatables.net and datatables.net-bs to v1.10.19</li>
@@ -16,11 +17,13 @@
       <li>upgrade popper to v1.14.4</li>
       <li>upgrade jquery to v3.3.1</li>
       <li>upgrade dropzone to v5.5.1</li>
+      <li>upgrade fm-app-settings to v2.0.0</li>
       <li>replace simplebar with perfect-scrollbar</li>
       <li>replace summernote with quill</li>
       <li>replace bootstrap-datepicker with flatpickr</li>
       <li>remove bootstrap-timepicker</li>
       <li>remove morris.js</li>
+      <li>remove sidebar-collapse package</li>
       <li>add highlight.js</li>
       <li>replace datatables with list.js</li>
       <li>add moment-range</li>
@@ -48,11 +51,14 @@
     <h4>Source</h4>
     <ul>
       <li>refactor nunjucks layouts</li>
+      <li>remove nunjucks page block statements from most pages (autoloaded from <code>src/html/partials/page.$slug.html</code>)</li>
+      <li>move nunjucks page styles and scripts to autoloaded <code>src/html/partials/{head,footer}.$slug.html</code></li>
       <li>cleanup and restructure Sass variables</li>
       <li>move <code>src/sass/style/*</code> to <code>src/sass</code></li>
-      <li>rename <code>src/sass/examples</code> to <code>src/sass/plugins</code></li>
+      <li>rename <code>src/sass/examples</code> to <code>src/sass/vendor</code></li>
       <li>rename main entry <code>style.scss</code> to <code>app.scss</code></li>
-      <li>rename main entry <code>main.js</code> to <code>app.js</code> <span class="badge badge-danger">todo</span></li>
+      <li>rename main entry javascript <code>main.js</code> to <code>app.js</code></li>
+      <li>rename <code>src/js/examples</code> to <code>src/js/vendor</code></li>
     </ul>
   </div>
 </div>
@@ -93,12 +99,9 @@
   <div class="card-body">
     <h4>General</h4>
     <ul>
-      <li>add multi level dropdowns <span class="badge badge-danger">todo</span></li>
-      <li>add preloader <span class="badge badge-danger">todo</span></li>
-      <li>add mini layout <span class="badge badge-danger">todo</span></li>
+      <li>add RTL</li>
+      <li>add preloader</li>
       <li>add theme settings</li>
-      <li>improve dropdowns</li>
-      <li>add softer dropdown link color</li>
       <li>improve popovers</li>
       <li>add page headings</li>
       <li>improve pagination</li>
@@ -131,8 +134,6 @@
   <div class="card-body">
     <h4>Components</h4>
     <ul>
-      <li>add modals page <span class="badge badge-danger">todo</span></li>
-      <li>add drawer page <span class="badge badge-danger">todo</span></li>
       <li>add badges page</li>
       <li>add alerts page</li>
       <li>add icons page</li>
@@ -141,9 +142,35 @@
       <li>fix page scroll performance on components layout</li>
       <li>replace switch toggle with new custom toggle checkbox</li>
       <li>improve buttons page</li>
+      <li>add button outline white variant</li>
       <li>improve cards page</li>
       <li>improve progress page</li>
       <li>improve tables page</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="plugins">
+  <div class="card-body">
+    <h4>Plugins</h4>
+    <ul>
+      <li>add sweet alert page</li>
+      <li>improve charts page</li>
+      <li>add drag &amp; drop page</li>
+      <li>improve nestable page</li>
+      <li>improve tree page</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="dropdown">
+  <div class="card-body">
+    <h4>Dropdown</h4>
+    <ul>
+      <li>improve dropdowns</li>
+      <li>add softer dropdown link color</li>
+      <li>add dropdown menu dark variant</li>
+      <li>add font weight 500 to active dropdown items</li>
     </ul>
   </div>
 </div>
@@ -154,21 +181,6 @@
     <ul>
       <li>add font awesome icons</li>
       <li>remove material icons cdn and replace with local npm package</li>
-    </ul>
-  </div>
-</div>
-
-<div class="card" id="plugins">
-  <div class="card-body">
-    <h4>Plugins</h4>
-    <ul>
-      <li>add flatpickr page <span class="badge badge-danger">todo</span></li>
-      <li>add daterangepicker page <span class="badge badge-danger">todo</span></li>
-      <li>add sweet alert page</li>
-      <li>improve charts page</li>
-      <li>add drag &amp; drop page</li>
-      <li>improve nestable page</li>
-      <li>improve tree page</li>
     </ul>
   </div>
 </div>
@@ -208,8 +220,6 @@
   <div class="card-body">
     <h4>Student pages</h4>
     <ul>
-      <li>add blog page <span class="badge badge-danger">todo</span></li>
-      <li>add student / browse courses / list view page <span class="badge badge-danger">todo</span></li>
       <li>fix student take quiz countdown timer</li>
       <li>improve invoice page</li>
       <li>improve help center page</li>
@@ -231,19 +241,17 @@
   </div>
 </div>
 
-<div class="card" id="fixed-layout">
+<div class="card" id="layouts">
   <div class="card-body">
     <h4>Fixed layout</h4>
     <ul>
-      <li>add large footer to fixed layout <span class="badge badge-danger">todo</span></li>
-      <li>add student blog post page to fixed layout <span class="badge badge-danger">todo</span></li>
       <li>add secondary navbar to fixed layout</li>
       <li>add component pages to fixed layout</li>
     </ul>
   </div>
 </div>
 
-<div class="card" id="fluid-layout">
+<div class="card">
   <div class="card-body">
     <h4>Fluid layout</h4>
     <ul>
@@ -257,9 +265,6 @@
   <div class="card-body">
     <h4>Sidebar</h4>
     <ul>
-      <li>add student public profile page to sidebar menu <span class="badge badge-danger">todo</span></li>
-      <li>add blog post page to sidebar menu <span class="badge badge-danger">todo</span></li>
-      <li>add blog page to sidebar menu <span class="badge badge-danger">todo</span></li>
       <li>improve sidebar dark skin</li>
       <li>improve sidebar light skin</li>
       <li>improve sidebar spacings</li>
@@ -279,6 +284,7 @@
       <li>improve navbar light skin</li>
       <li>add navbar / notifications icon with badge status and dropdown menu</li>
       <li>increase navbar height to 64px on medium to large screens</li>
+      <li>improve navbar collapse menus</li>
     </ul>
   </div>
 </div>
