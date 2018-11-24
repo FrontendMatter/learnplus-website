@@ -4,8 +4,8 @@
   </defs>
   <g fill="none" fill-rule="evenodd">
     <rect width="80" height="80" fill="#39444D" fill-rule="nonzero"/>
-    <rect width="80" height="20" y="60" fill="#2E3133" fill-opacity=".9" fill-rule="nonzero"/>
-    <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="11.31" font-weight="400" opacity=".5">
+    <rect width="80" height="20" y="60" fill="#2196F3" fill-rule="nonzero"/>
+    <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="11.31" font-weight="400">
       <tspan x="15.083" y="72">Bootstrap</tspan>
     </text>
     <g transform="translate(9 6)">
