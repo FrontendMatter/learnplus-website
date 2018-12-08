@@ -1,12 +1,11 @@
 @import './variables';
 
 @import 'ui-learnplus-bootstrap/scss/app';
+@import 'bootstrap-custom-checkbox-toggle/bootstrap-custom-checkbox-toggle';
+@import 'fm-avatar/avatar';
 
 @import './code';
-@import './range';
 @import './rating';
-@import './custom-checkbox-toggle';
-@import './avatar';
 @import './learnplus';
 
 .z-2 {

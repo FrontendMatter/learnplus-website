@@ -1,299 +1,335 @@
-<div class="card bg-dark">
-  <img style="max-width: 100%;" src="assets/images/preview/01_update-v4.0.0.svg" alt="LearnPlus Bootstrap v4.0.0">
+<div class="card" style="overflow: hidden;">
+  <img style="max-width: 100%;" src="assets/images/site/update-v4.1.0@2x.png" alt="LearnPlus Bootstrap v4.1.0">
 </div>
 
-<div class="card" id="packages">
+<div class="card" id="style-guide">
+  <div class="card-header d-flex align-items-center">
+    <h4 class="card-title mb-0">Style Guide</h4>
+    <span class="ml-auto badge badge-dark">ui-learnplus-bootstrap v2.0.0</span>
+  </div>
   <div class="card-body">
-    <h4>Packages</h4>
+    <h4 class="h5">General</h4>
     <ul>
-      <li>add ui-learnplus-bootstrap package</li>
-      <li>upgrade bootstrap to v4.1.3</li>
-      <li>upgrade chart.js to v2.7.3</li>
-      <li>upgrade datatables.net and datatables.net-bs to v1.10.19</li>
-      <li>upgrade jquery.fancytree to v2.30.0</li>
-      <li>upgrade material-design-kit to v1.0.0-alpha.22</li>
-      <li>upgrade moment to v2.22.2</li>
-      <li>upgrade moment-timezone to v0.5.21</li>
-      <li>upgrade popper to v1.14.4</li>
-      <li>upgrade jquery to v3.3.1</li>
-      <li>upgrade dropzone to v5.5.1</li>
-      <li>upgrade fm-app-settings to v2.0.0</li>
-      <li>replace simplebar with perfect-scrollbar</li>
-      <li>replace summernote with quill</li>
-      <li>replace bootstrap-datepicker with flatpickr</li>
-      <li>remove bootstrap-timepicker</li>
-      <li>remove morris.js</li>
-      <li>remove sidebar-collapse package</li>
-      <li>add highlight.js</li>
-      <li>replace datatables with list.js</li>
-      <li>add moment-range</li>
+      <li>fix buttons sizing</li>
+      <li>add badge-notifications</li>
+      <li>reset list group z-index</li>
+      <li>add xs-md breakpoint (iPhone 8 - 375px)</li>
+      <li>add form-label modifier for applying a different style to form labels</li>
+      <li>match alert margin-bottom with card</li>
+      <li>add app settings to fixed layout</li>
+      <li>add sidebar / messages collapse menu</li>
+    </ul>
+
+    <h4 class="h5">Dependencies</h4>
+    <ul>
+      <li>bump material-design-kit to v1.0.0-alpha.24</li>
+    </ul>
+
+    <h4 class="h5">Card</h4>
+    <ul>
+      <li>remove custom card-stats classes in favor of utility helpers</li>
+      <li>cleanup card-options</li>
+    </ul>
+
+    <h4 class="h5">Tab</h4>
+    <ul>
+      <li>add nav-tabs-card</li>
+    </ul>
+
+    <h4 class="h5">Navbar</h4>
+    <ul>
+      <li>add navbar dropdown max height</li>
+      <li>add dropdown-notifications / unread background and status indicator</li>
+      <li>add dropdown-notifications / badge-notifications</li>
+      <li>remove dropdown-notifications / list-group-item-meta</li>
+    </ul>
+
+    <h4 class="h5">Perfect Scrollbar</h4>
+    <ul>
+      <li>disable perfect scrollbar wheel propagation</li>
+      <li>disable perfect scrollbar swipe easing</li>
+    </ul>
+
+    <h4 class="h5">Drawer</h4>
+    <ul>
+      <li>improve drawer scrim color</li>
+      <li>reduce sidebar heading font size and increase font weight</li>
+      <li>change sidebar-transparent background color to $body-bg (fixes some issues when applying the class from JS)</li>
+    </ul>
+
+    <h4 class="h5">Search</h4>
+    <ul>
+      <li>fix search form button spacing</li>
+      <li>drop navbar-search-form in favor of search-form component</li>
+    </ul>
+
+    <h4 class="h5">Utility</h4>
+    <ul>
+      <li>add border width utility helpers</li>
+      <li>add border-{1,2,3} utilities</li>
+      <li>add text-base utility for applying base font family</li>
+      <li>add text-ellipsis utility</li>
+      <li>add z-{0,1,2,3} depth utilities</li>
+      <li>add w-{breakpoint}-down-100 utilities for applying width: 100% on smaller screens</li>
+      <li>add {left,right,top,bottom}-0 utilities</li>
+      <li>add navbar-height and navbar-shadow utilities</li>
+      <li>add table-nowrap utility</li>
+    </ul>
+
+    <h4 class="h5">Dropdown</h4>
+    <ul>
+      <li>add smoother dropdown-menu transitions</li>
+      <li>clean dropdown.js</li>
+      <li>enable Popper gpuAcceleration</li>
+      <li>add dropdown transition variable</li>
+      <li>improve dropdown menu shadow color</li>
+      <li>improve dropdown menu transition</li>
+    </ul>
+
+    <h4 class="h5">Modal</h4>
+    <ul>
+      <li>improve modal backdrop color</li>
+      <li>remove modal content border</li>
+      <li>improve modal shadow color</li>
+      <li>improve modal transition</li>
     </ul>
   </div>
 </div>
 
-<div class="card" id="development">
+<div class="card" id="layout">
+  <div class="card-header d-flex align-items-center">
+    <h4 class="card-title mb-0">Layout</h4>
+    <span class="ml-auto badge badge-dark">material-design-kit v1.0.0-alpha.24</span>
+  </div>
   <div class="card-body">
-    <h4>Dev Packages</h4>
     <ul>
-      <li>upgrade browser-sync to v2.26.3</li>
-      <li>upgrade browser-sync-webpack-plugin to v2.2.2</li>
-      <li>upgrade cross-env to v5.2.0</li>
-      <li>upgrade lite-server to v2.4.0</li>
-      <li>upgrade surge to v0.20.1</li>
-      <li>upgrade theme-mix to v1.0.1</li>
-      <li>enable sourcemaps in development</li>
+      <li>fix drawer layout within drawer layout issues</li>
+      <li>upgrade drawer layout to flexbox</li>
+      <li>fix RTL</li>
     </ul>
   </div>
 </div>
 
-<div class="card" id="source">
+<div class="card" id="main-navbar">
   <div class="card-body">
-    <h4>Source</h4>
+    <h4 class="h5">Main Navbar</h4>
     <ul>
-      <li>refactor nunjucks layouts</li>
-      <li>remove nunjucks page block statements from most pages (autoloaded from <code>src/html/partials/page.$slug.html</code>)</li>
-      <li>move nunjucks page styles and scripts to autoloaded <code>src/html/partials/{head,footer}.$slug.html</code></li>
-      <li>cleanup and restructure Sass variables</li>
-      <li>move <code>src/sass/style/*</code> to <code>src/sass</code></li>
-      <li>rename <code>src/sass/examples</code> to <code>src/sass/vendor</code></li>
-      <li>rename main entry <code>style.scss</code> to <code>app.scss</code></li>
-      <li>rename main entry javascript <code>main.js</code> to <code>app.js</code></li>
-      <li>rename <code>src/js/examples</code> to <code>src/js/vendor</code></li>
+      <li>add navbar / notifications dropdown / conversations</li>
+      <li>add navbar / notifications dropdown / system messages</li>
+      <li>add navbar / notifications dropdown / important notifications indicator</li>
+      <li>add navbar / notifications dropdown / unread messages indicator</li>
+      <li>add navbar / notifications dropdown / badge-notifications class</li>
+      <li>show navbar brand on xs-md and up (iPhone 8)</li>
+      <li>fix navbar account and notifications spacings to accomodate smaller screens</li>
+      <li>show navbar notifications dropdown on mobile</li>
+      <li>add navbar / notifications dropdown / scrollable area with perfect scrollbar</li>
+      <li>add instructor / navbar / search</li>
+      <li>remove navbar / search / margin right</li>
+      <li>remove navbar / notifications nav item / margin left</li>
+      <li>add navbar / navbar-nav / flex-nowrap</li>
+      <li>replace navbar search form with search-form component</li>
     </ul>
   </div>
 </div>
 
-<div class="card" id="bootstrap">
-  <div class="card-body">
-    <h4>Bootstrap v4-beta.2 to v4.1.3 changes</h4>
-    <ul>
-      <li>remove <code>.custom-control-indicator</code></li>
-      <li>remove <code>.custom-control-description</code></li>
-      <li>place <code>label.custom-control-label</code> inside <code>.custom-control</code></li>
-      <li>place <code>label.custom-file-label</code> inside <code>.custom-file</code></li>
-      <li>remove <code>.custom-file-control</code></li>
-      <li>add <code>.custom-file-input</code> to <code>.custom-file > input</code></li>
-      <li>cleanup custom forms style fixes from bootstrap v4-beta.2</li>
-      <li>remove <code>.input-group-addon</code> and <code>.input-group-btn</code> and replace with <code>.input-group-append</code> and <code>.input-group-prepend</code></li>
-      <li>wrap .input-group text in .input-group-text</li>
-    </ul>
+<div class="card" id="account">
+  <div class="card-header">
+    <h4 class="card-title">Account Pages</h4>
   </div>
-</div>
-
-<div class="card" id="fixes">
   <div class="card-body">
-    <h4>Fixes</h4>
+    <h4 class="h5">Messages</h4>
     <ul>
-      <li>remove <code>.media-middle</code> class from <code>.media-body</code> and add <code>.align-items-center</code> to <code>.media</code> wrapper</li>
-      <li>fix <code>.icon-block</code> icon vertical alignment</li>
-      <li>remove <code>.bg-white</code> helper (included with bs 4.1.3)</li>
-      <li>remove google web fonts from html head tag and load via css import</li>
-      <li>replace mdk tooltips with bootstrap tooltips on student dashboard</li>
-      <li>fix page scroll performance on calendar layout</li>
-      <li>fix instructor edit account links from layouts sidebar menu</li>
+      <li>add messages / search members</li>
+      <li>add messages / reply form with emojis and file upload</li>
+      <li>add messages / conversation inner scroll area with perfect scrollbar</li>
+      <li>add messages / move reply form in visible viewport</li>
+      <li>add messages / new floating conversation blocks with emojis and files</li>
+      <li>add messages / auto scroll conversation to bottom</li>
+      <li>improve messages / increase chat drawer width</li>
+      <li>add messages / chat drawer member avatar status indicator</li>
+      <li>add messages / chat drawer member status message</li>
+      <li>improve messages / chat drawer active member conversation</li>
+      <li>improve messages / chat drawer member spacing</li>
+      <li>add messages / reply form / add message to conversation</li>
+      <li>add messages / reply form / autofocus</li>
+      <li>add new messages page with fluid layout and default drawer active</li>
+      <li>add new messages to fixed layout</li>
+      <li>add messages / conversation navbar with avatar, status, search conversation and drawer toggle button</li>
+      <li>fix messages scroll to bottom</li>
+      <li>align messages sidebar search with messages navbar</li>
+      <li>add messages / app navbar / avatar online status</li>
+      <li>fix messages / app navbar / show chat drawer toggle button on fixed layout</li>
+      <li>add messages / sidebar / status text muted and ellipsis</li>
+      <li>add messages / sidebar / offline members</li>
     </ul>
-  </div>
-</div>
 
-<div class="card" id="general">
-  <div class="card-body">
-    <h4>General</h4>
+    <h4 class="h5">Login / Signup</h4>
     <ul>
-      <li>add RTL</li>
-      <li>add preloader</li>
-      <li>add theme settings</li>
-      <li>improve popovers</li>
-      <li>add page headings</li>
-      <li>improve pagination</li>
-      <li>improve buttons</li>
-      <li>improve cards</li>
-      <li>improve list groups</li>
-      <li>improve color scheme</li>
-      <li>improve breadcrumbs</li>
-      <li>improve tabs</li>
+      <li>add login / signup / form labels</li>
+      <li>add login / signup / form merge groups with font awesome icons</li>
+      <li>center login / signup forms on page</li>
+      <li>add login / signup / continue with google button</li>
+      <li>improve login / signup / text and link colors and font size</li>
+      <li>add login / signup / increase card box shadow</li>
+      <li>add login / signup / brand</li>
+      <li>fix login / signup - brand link</li>
     </ul>
-  </div>
-</div>
 
-<div class="card" id="typography">
-  <div class="card-body">
-    <h4>Typography &amp; Rythm</h4>
+    <h4 class="h5">Edit Account</h4>
     <ul>
-      <li>update containers max widths to fit on a horizontal 8pt grid</li>
-      <li>update spacings to improve vertical rythm by using a type scale and a 8pt vertical grid</li>
-      <li>add typefaces for display and body text</li>
-      <li>change <code>&lt;code&gt;</code> text color to primary color</li>
-      <li>improve bold type</li>
-      <li>reduce base font size to <code>.9375rem</code></li>
-      <li>improve text muted color</li>
-    </ul>
-  </div>
-</div>
-
-<div class="card" id="components">
-  <div class="card-body">
-    <h4>Components</h4>
-    <ul>
-      <li>add badges page</li>
-      <li>add alerts page</li>
-      <li>add icons page</li>
-      <li>add avatars page</li>
-      <li>add loaders page</li>
-      <li>fix page scroll performance on components layout</li>
-      <li>replace switch toggle with new custom toggle checkbox</li>
-      <li>improve buttons page</li>
-      <li>add button outline white variant</li>
-      <li>improve cards page</li>
-      <li>improve progress page</li>
-      <li>improve tables page</li>
-    </ul>
-  </div>
-</div>
-
-<div class="card" id="plugins">
-  <div class="card-body">
-    <h4>Plugins</h4>
-    <ul>
-      <li>add sweet alert page</li>
-      <li>improve charts page</li>
-      <li>add drag &amp; drop page</li>
-      <li>improve nestable page</li>
-      <li>improve tree page</li>
-    </ul>
-  </div>
-</div>
-
-<div class="card" id="dropdown">
-  <div class="card-body">
-    <h4>Dropdown</h4>
-    <ul>
-      <li>improve dropdowns</li>
-      <li>add softer dropdown link color</li>
-      <li>add dropdown menu dark variant</li>
-      <li>add font weight 500 to active dropdown items</li>
-    </ul>
-  </div>
-</div>
-
-<div class="card" id="icons">
-  <div class="card-body">
-    <h4>Icons</h4>
-    <ul>
-      <li>add font awesome icons</li>
-      <li>remove material icons cdn and replace with local npm package</li>
-    </ul>
-  </div>
-</div>
-
-<div class="card" id="forms">
-  <div class="card-body">
-    <h4>Forms</h4>
-    <ul>
-      <li>add forms / basic</li>
-      <li>add forms / validation</li>
-      <li>add forms / search</li>
-      <li>add forms / merge group</li>
-      <li>add forms / rounded</li>
-      <li>add forms / flush</li>
-      <li>add forms / toggle</li>
-      <li>add forms / custom controls</li>
-      <li>add forms / date picker</li>
-      <li>add forms / input masking</li>
-      <li>add forms / rich text editor</li>
-    </ul>
-  </div>
-</div>
-
-<div class="card" id="tables">
-  <div class="card-body">
-    <h4>Tables</h4>
-    <ul>
-      <li>add tables / toggle checkboxes</li>
-      <li>add tables / sort columns</li>
-      <li>add tables / search</li>
-      <li>improve table heading style</li>
+      <li>add edit account / nav-tabs-card class to nav-tabs</li>
+      <li>add edit account / form-label class to labels</li>
     </ul>
   </div>
 </div>
 
 <div class="card" id="student">
+  <div class="card-header">
+    <h4 class="card-title">Student Pages</h4>
+  </div>
   <div class="card-body">
-    <h4>Student pages</h4>
+    <h4 class="h5">Student / Dashboard</h4>
     <ul>
-      <li>fix student take quiz countdown timer</li>
-      <li>improve invoice page</li>
-      <li>improve help center page</li>
-      <li>improve student / my courses page</li>
-      <li>fix page scroll performance on student pages</li>
+      <li>improve student / dashboard / forum activity</li>
+      <li>change student / dashboard / courses / course links to bold with body text color</li>
+      <li>add student / dashboard / courses / avatars with 4 by 3 ratio</li>
+      <li>add student / dashboard / courses / list item options</li>
+      <li>move student / dashboard / courses / progress under course title</li>
+    </ul>
+
+    <h4 class="h5">Student / Pay</h4>
+    <ul>
+      <li>add student / pay / form-label class to labels</li>
+      <li>fix student / pay / replace form-control-label class with col-form-label</li>
+      <li>fix student / pay / add missing paypal icon</li>
     </ul>
   </div>
 </div>
 
 <div class="card" id="instructor">
+  <div class="card-header">
+    <h4 class="card-title">Instructor Pages</h4>
+  </div>
   <div class="card-body">
-    <h4>Instructor pages</h4>
+    <h4 class="h5">Instructor / Dashboard</h4>
     <ul>
-      <li>improve earnings chart on instructor dashboard page</li>
-      <li>fix instructor earnings responsive table</li>
-      <li>fix page scroll performance on instructor pages</li>
-      <li>improve instructor / dashboard / transactions card</li>
+      <li>change instructor / dashboard / bold course links with body text color</li>
+      <li>change instructor / dashboard / transactions / course avatars to 4 by 3 ratio</li>
+      <li>add instructor / dashboard / earnings bar chart</li>
+      <li>add instructor / dashboard / transactions / table-nowrap</li>
+      <li>add instructor / dashboard / transactions / sorting via list.js</li>
+      <li>improve instructor / dashboard / comments</li>
+      <li>add instructor / dashboard / comments / reply sample</li>
+      <li>add instructor / dashboard / comments / quick reply buttons (emojis, files and send)</li>
+    </ul>
+
+    <h4 class="h5">Instructor / Manage Courses</h4>
+    <ul>
+      <li>add instructor / manage courses / new course cards</li>
+      <li>add instructor / manage courses / no results alert</li>
+      <li>add instructor / manage courses / management card with filters, search and sort</li>
+      <li>add instructor / manage courses / filters dropdown / clear filters link</li>
+      <li>add instructor / manage courses / filters dropdown / published</li>
+      <li>add instructor / manage courses / course card options dropdown</li>
+    </ul>
+
+    <h4 class="h5">Instructor / Quizzes</h4>
+    <ul>
+      <li>add instructor / quizzes / form-label class to labels</li>
+    </ul>
+
+    <h4 class="h5">Instructor / Edit Quiz</h4>
+    <ul>
+      <li>add instructor / edit quiz / form-label class to labels</li>
+      <li>fix instructor / edit quiz / edit question modal / heading and close button color and size</li>
+      <li>improve instructor / edit quiz / edit question modal / center modal on page</li>
+      <li>add instructor / edit quiz / save button</li>
+    </ul>
+
+    <h4 class="h5">Instructor / Review Quiz</h4>
+    <ul>
+      <li>replace instructor / review quiz / nouislider with bootstrap range</li>
+      <li>add instructor / review quiz / nav-tabs-card class to nav-tabs</li>
+      <li>add instructor / review quiz / form-label class to labels</li>
+    </ul>
+
+    <h4 class="h5">Instructor / Edit Course</h4>
+    <ul>
+      <li>add instructor / edit course / quill rich text editor</li>
+      <li>improve instructor / edit course / meta form - move controls under labels</li>
+      <li>add flatpickr to instructor / edit course / start and end dates</li>
+      <li>add color completion badges to instructor / edit course / meta form</li>
+      <li>add instructor / edit course / form-label class to labels</li>
+    </ul>
+
+    <h4 class="h5">Instructor / Add Lesson</h4>
+    <ul>
+      <li>fix instructor / add lesson / replace form-control-label class with col-form-label</li>
+      <li>add instructor / add lesson / form-label class to labels</li>
+    </ul>
+
+    <h4 class="h5">Instructor / Statement</h4>
+    <ul>
+      <li>add flatpickr date range to instructor statement</li>
+      <li>add instructor / statement / form-label class to labels</li>
     </ul>
   </div>
 </div>
 
-<div class="card" id="layouts">
+<div class="card" id="other">
   <div class="card-body">
-    <h4>Fixed layout</h4>
+    <h4 class="h5">General</h4>
     <ul>
-      <li>add secondary navbar to fixed layout</li>
-      <li>add component pages to fixed layout</li>
+      <li>remove custom card-stats classes in favor of utility helpers</li>
+      <li>add page separator</li>
+      <li>add v4.1.0 app settings cookie namespace</li>
+      <li>add settings drawer</li>
+      <li>add settings button</li>
     </ul>
-  </div>
-</div>
 
-<div class="card">
-  <div class="card-body">
-    <h4>Fluid layout</h4>
+    <h4 class="h5">Components</h4>
     <ul>
-      <li>increase drawer layout responsive breakpoint to 992px</li>
-      <li>reduce container-fluid max width on fluid layout to 944px</li>
+      <li>add forms / form-label class to labels</li>
+      <li>add tabs / nav-tabs-card class to nav-tabs</li>
     </ul>
-  </div>
-</div>
 
-<div class="card" id="sidebar">
-  <div class="card-body">
-    <h4>Sidebar</h4>
+    <h4 class="h5">Plugins</h4>
     <ul>
-      <li>improve sidebar dark skin</li>
-      <li>improve sidebar light skin</li>
-      <li>improve sidebar spacings</li>
-      <li>indent sidebar submenus</li>
-      <li>add plugins sidebar menu</li>
-      <li>add layouts to sidebar menu on components pages</li>
-      <li>add sidebar collapse menu toggle icon transition</li>
+      <li>add listjs sort-by and sort-desc options for auto sorting after initialization</li>
+      <li>fix flatpickr primary color</li>
+      <li>add charts / nav-tabs-card class to nav-tabs code samples</li>
+      <li>add charts / form-label class to labels</li>
     </ul>
-  </div>
-</div>
 
-<div class="card" id="navbar">
-  <div class="card-body">
-    <h4>Navbar</h4>
+    <h4 class="h5">Dependencies</h4>
     <ul>
-      <li>improve navbar dark skin</li>
-      <li>improve navbar light skin</li>
-      <li>add navbar / notifications icon with badge status and dropdown menu</li>
-      <li>increase navbar height to 64px on medium to large screens</li>
-      <li>improve navbar collapse menus</li>
+      <li>bump ui-learnplus-bootstrap to v2.0.0</li>
+      <li>bump fm-app-settings to v4.0.1</li>
+      <li>remove nouislider dependency</li>
+      <li>add fm-plugin-flatpickr v1.0.1</li>
+      <li>add fm-plugin-chartjs v1.0.1</li>
+      <li>add fm-plugin-quill v1.0.1</li>
+      <li>add fm-plugin-listjs v1.0.2</li>
+      <li>add fm-plugin-dragula v1.0.0</li>
+      <li>remove flatpickr dependency (installed by fm-plugin-flatpickr)</li>
+      <li>remove chart.js dependency (installed by fm-plugin-chartjs)</li>
+      <li>remove quill dependency (installed by fm-plugin-quill)</li>
+      <li>remove list.js dependency (installed by fm-plugin-listjs)</li>
+      <li>remove dragula dependency (installed by fm-plugin-dragula)</li>
     </ul>
-  </div>
-</div>
 
-<div class="card" id="forum">
-  <div class="card-body">
-    <h4>Forum</h4>
+    <h4 class="h5">Source</h4>
     <ul>
-      <li>fix forum thread reply buttons</li>
+      <li>move avatars to fm-avatar package</li>
+      <li>move custom toggle to bootstrap-custom-checkbox-toggle package</li>
+      <li>move flatpickr to fm-plugin-flatpickr package</li>
+      <li>move charts to fm-plugin-chartjs package</li>
+      <li>rename charts.js to chartjs.js</li>
+      <li>move quill to fm-plugin-quill package</li>
+      <li>move lists to fm-plugin-listjs package</li>
+      <li>move drag to fm-plugin-dragula</li>
+      <li>rename ui-drag.js to dragula.js</li>
+      <li>move loaders to fm-loader package</li>
     </ul>
   </div>
 </div>

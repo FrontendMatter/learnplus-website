@@ -13,8 +13,10 @@
   "author": "FrontendMatter <contact@frontendmatter.com> (http://www.frontendmatter.com)",
   "license": "UNLICENSED",
   "dependencies": {
+    "bootstrap-custom-checkbox-toggle": "^1.0.0",
+    "fm-avatar": "^1.0.0",
     "highlight.js": "^9.13.1",
-    "ui-learnplus-bootstrap": "gitlab:FrontendMatter/ui-learnplus-bootstrap#master"
+    "ui-learnplus-bootstrap": "gitlab:FrontendMatter/ui-learnplus-bootstrap#v2.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",

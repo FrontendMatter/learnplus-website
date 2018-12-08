@@ -11,6 +11,22 @@
           <a class="nav-link" href="changelog.html">Release Notes</a>
         </li>
       </ul>
+
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="btn btn-white dropdown-toggle" data-toggle="dropdown" href="#">{{ release_version }}</a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item{% if slug === 'changelog' or slug === 'documentation' %} active{% endif %}" href="changelog.html">v4.1.0 - 8 Dec 2018</a>
+            <a class="dropdown-item{% if slug === 'changelog-v4.0.0' %} active{% endif %}" href="changelog-v4.0.0.html">v4.0.0 - 24 Nov 2018</a>
+            <a class="dropdown-item{% if slug === 'changelog-v3.1.1' %} active{% endif %}" href="changelog-v3.1.1.html">v3.1.1 - 24 Aug 2018</a>
+            <a class="dropdown-item{% if slug === 'changelog-v3.1.0' %} active{% endif %}" href="changelog-v3.1.0.html">v3.1.0 - 14 Dec 2017</a>
+            <a class="dropdown-item{% if slug === 'changelog-v3.0.0' %} active{% endif %}" href="changelog-v3.0.0.html">v3.0.0 - 8 Dec 2017</a>
+            <a class="dropdown-item{% if slug === 'changelog-v2.0.0' %} active{% endif %}" href="changelog-v2.0.0.html">v2.0.0 - 11 Nov 2016</a>
+            <a class="dropdown-item{% if slug === 'changelog-v1.0.1' %} active{% endif %}" href="changelog-v1.0.1.html">v1.0.1 - 18 Mar 2016</a>
+            <a class="dropdown-item disabled" href="javascript:void(0)">v1.0.0 - Initial Release</a>
+          </div>
+        </li>
+      </ul>
     </nav>
 
   </div>
