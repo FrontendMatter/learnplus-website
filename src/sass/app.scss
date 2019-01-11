@@ -7,10 +7,32 @@
 @import './code';
 @import './rating';
 @import './learnplus';
+@import './page-separator';
 
 .z-2 {
   position: relative;
   z-index: 2;
+}
+
+.row-cards [class*="col"] {
+  display: flex;
+  flex-direction: column;
+  .card {
+    flex: 1 1 0%;
+  }
+}
+
+.bg-hover-scroll {
+  height: 200px;
+  position: relative;
+  display: block;
+  transition: background-position 1s ease-out;
+  background-position: top center !important;
+  background-size: 100% auto !important;
+  background-repeat: no-repeat !important;
+  &:hover {
+    background-position: bottom center !important;
+  }
 }
 
 @include media-breakpoint-up(lg) {

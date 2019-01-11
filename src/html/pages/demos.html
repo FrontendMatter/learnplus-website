@@ -1,0 +1,360 @@
+---
+title: LearnPlus - Demos
+slug: demos
+bodyClass: layout-sticky-subnav
+---
+{% extends "layouts/fixed.html" %}
+
+{% block page %}
+<div class="bg-gradient-primary py-32pt py-lg-64pt">
+  <div class="{{ containerClass }} page__container">
+    <div class="hero text-center">
+      <div class="avatar avatar-lg mb-3">
+        <img src="assets/images/icon/student/white.svg" alt="Student" class="avatar-img" />
+      </div>
+      <h1 class="text-white">Student</h1>
+      <p class="lead measure-lead-max mx-auto text-white-50">A collection of website pages designed to provide students with a complete online learning experience. Inspired from the most popular learning platforms on the web today.</p>
+
+      <a href="{{ demo_url }}student-dashboard.html" target="_blank" class="btn btn-lg btn-outline-white btn-rounded">Student demo</a>
+    </div>
+  </div>
+</div>
+
+{% import 'components/demo.html' as demo %}
+
+{% set student = [
+  {
+    title: "Student Dashboard",
+    description: "Page with subscription status, recent courses, student rewards, quiz performance and forum activity",
+    image: "assets/images/choose/student/dashboard.png",
+    href: "student-dashboard.html"
+  },
+  {
+    title: "Browse Courses",
+    image: "assets/images/choose/student/browse-courses.png",
+    href: "student-browse-courses.html"
+  },
+  {
+    title: "View Course",
+    description: "Page for non-paying students with a course video preview, course lessons list, partial access to some lessons, pricing (subscription or single purchase), about the instructor and course ratings",
+    image: "assets/images/choose/student/view-course.png",
+    href: "student-view-course.html"
+  },
+  {
+    title: "Take Course",
+    description: "Page for paying members with access to all course lessons and download lesson files",
+    image: "assets/images/choose/student/take-course.png",
+    href: "student-take-course.html"
+  },
+  {
+    title: "Take Quiz",
+    description: "Page with a sidebar navigation for the quiz questions, a quiz countdown timer and quiz statistics",
+    image: "assets/images/choose/student/take-quiz.png",
+    href: "student-take-quiz.html"
+  },
+  {
+    title: "Quiz Results",
+    description: "Page displaying the summary of a single quiz submission by a student, displaying the correct answers and offering the possibility to restart the quiz",
+    image: "assets/images/choose/student/quiz-results.png",
+    href: "student-quiz-results.html"
+  },
+  {
+    title: "My Courses",
+    description: "Page displaying only the courses started by the student, with progress activity",
+    image: "assets/images/choose/student/my-courses.png",
+    href: "student-my-courses.html"
+  }
+] %}
+
+{% set auth = [
+  {
+    title: "Login",
+    image: "assets/images/choose/utility/login.png",
+    href: "guest-login.html"
+  }, 
+  {
+    title: "Signup",
+    image: "assets/images/choose/utility/signup.png",
+    href: "guest-signup.html"
+  },
+  {
+    title: "Forgot Password",
+    image: "assets/images/choose/utility/forgot-password.png",
+    href: "guest-forgot-password.html"
+  }
+] %}
+
+{% set account = [
+  {
+    title: "Edit Account",
+    description: "Page with common editable profile fields (avatar image upload, the student name, email, password, etc) and <strong>Account Billing</strong> settings with saved payment methods",
+    image: "assets/images/choose/student/edit-account.png",
+    href: "student-account-edit.html"
+  },
+  {
+    title: "Edit Account - Basic Information",
+    description: "Page with common editable account fields (first name, last name, email) and change password",
+    image: "assets/images/choose/student/basic-information.png",
+    href: "student-account-edit-basic.html"
+  },
+  {
+    title: "Edit Account - Profile & Privacy",
+    description: "Page with common editable profile fields (avatar image upload, profile name, about) and privacy settings",
+    image: "assets/images/choose/student/profile-privacy.png",
+    href: "student-account-edit-profile.html"
+  },
+  {
+    title: "Billing - Subscription",
+    description: "Page with subscription information such as current plan, billing cycle, payment information and cancel subscription",
+    image: "assets/images/choose/student/subscription.png",
+    href: "student-account-billing-subscription.html"
+  },
+  {
+    title: "Billing - Upgrade Account",
+    description: "Page with subscription plan upgrade.",
+    image: "assets/images/choose/student/upgrade-account.png",
+    href: "student-account-billing-upgrade.html"
+  },
+  {
+    title: "Billing - Payment History",
+    description: "Page with payment history, past invoices and overdue payment notice with the option to pay",
+    image: "assets/images/choose/student/billing.png",
+    href: "student-billing.html"
+  },
+  {
+    title: "Billing - Payment Information",
+    image: "assets/images/choose/student/payment-information.png",
+    href: "student-billing-payment-information.html"
+  },
+  {
+    title: "Make Payment",
+    description: "Page with saved payment options such as credit cards, PayPal or pay by a different card form",
+    image: "assets/images/choose/student/pay.png",
+    href: "student-pay.html"
+  },
+  {
+    title: "Checkout",
+    description: "Page for purchasing multiple items at once",
+    image: "assets/images/choose/student/shopping-cart.png",
+    href: "student-cart.html"
+  },
+  {
+    title: "Invoice",
+    description: "Printable Invoice template page",
+    image: "assets/images/choose/student/invoice.png",
+    href: "student-invoice.html"
+  }
+] %}
+
+{% set messages = [
+  {
+    title: "Messages",
+    description: "Page for system notifications or student / instructor private messaging",
+    image: "assets/images/choose/student/messages.png",
+    href: "student-messages.html"
+  },
+  {
+    title: "Messages #2",
+    image: "assets/images/choose/student/messages-2.png",
+    href: "student-messages-2.html"
+  }
+] %}
+
+{% set community = [
+  {
+    title: "Student Profile - Courses",
+    description: "Page displaying acquired skills with courses completed by the student and rewards",
+    image: "assets/images/choose/student/profile.png",
+    href: "student-profile.html"
+  },
+  {
+    title: "Student Profile - Posts",
+    description: "Page displaying posts published by the student",
+    image: "assets/images/choose/student/profile-posts.png",
+    href: "student-profile-posts.html"
+  },
+  {
+    title: "Instructor Profile",
+    description: "Page displaying the instructor rating and a public portfolio of all the courses by the instructor",
+    image: "assets/images/choose/instructor/profile.png",
+    href: "instructor-profile.html"
+  },
+  {
+    title: "Forum",
+    description: "",
+    image: "assets/images/choose/student/forum.png",
+    href: "student-forum.html"
+  },
+  {
+    title: "Discussion",
+    description: "",
+    image: "assets/images/choose/student/discussion.png",
+    href: "student-forum-thread.html"
+  }
+] %}
+
+{% set instructor = [
+  {
+    title: "Instructor Dashboard",
+    description: "Page with earnings statistics displaying the last 30 days, sales by Course, latest transactions and latest student comments",
+    image: "assets/images/choose/instructor/dashboard.png",
+    href: "instructor-dashboard.html"
+  },
+  {
+    title: "Course Manager",
+    description: "Page displaying the instructor courses portfolio",
+    image: "assets/images/choose/instructor/manage-courses.png",
+    href: "instructor-courses.html"
+  },
+  {
+    title: "Add or Edit Course",
+    description: "Page editor for course title, description, sortable associated lessons, course video, course meta with category, duration, start and end date and completion badges.",
+    image: "assets/images/choose/instructor/edit-course.png",
+    href: "instructor-course-edit.html"
+  },
+  {
+    title: "Create or Edit Lesson",
+    description: "Page editor with lesson title, associated course, lesson video, and drag &amp; drop file uploader.",
+    image: "assets/images/choose/instructor/edit-lesson.png",
+    href: "instructor-lesson-add.html"
+  },
+  {
+    title: "Create or Edit Quiz",
+    description: "Page editor with basic quiz information such as title, associated course, image uploader, quiz time limit, sortable quiz questions and a custom question modal interface",
+    image: "assets/images/choose/instructor/edit-quiz.png",
+    href: "instructor-quiz-edit.html"
+  },
+  {
+    title: "Review Quiz",
+    description: "Page displaying the submissions and review history for a single quiz, with review options and score assignment per question for instructors",
+    image: "assets/images/choose/instructor/review-quiz.png",
+    href: "instructor-review-quiz.html"
+  },
+  {
+    title: "Messages",
+    description: "Page for system notifications or student / instructor private messaging",
+    image: "assets/images/choose/instructor/messages.png",
+    href: "instructor-messages.html"
+  }
+] %}
+
+{% set financial = [
+  {
+    title: "Earnings",
+    description: "Page with sales statistics by year and by course",
+    image: "assets/images/choose/instructor/earnings.png",
+    href: "instructor-earnings.html"
+  },
+  {
+    title: "Statement",
+    description: "Page with detailed transaction history",
+    image: "assets/images/choose/instructor/statement.png",
+    href: "instructor-statement.html"
+  }
+] %}
+
+<div class="py-32pt pb-lg-64pt {{ containerClass }} page__container">
+  <div class="page-separator" id="student-demos">
+    <div class="page-separator__text">Student</div>
+  </div>
+
+  <div class="row row-cards">
+    {% for item in student %}
+      {{ demo.component(item=item, demo_url=demo_url) }}
+    {% endfor %}
+  </div>
+
+  <div class="page-separator" id="community-demos">
+    <div class="page-separator__text">Community</div>
+  </div>
+
+  <div class="row row-cards">
+    {% for item in community %}
+      {{ demo.component(item=item, demo_url=demo_url) }}
+    {% endfor %}
+  </div>
+
+</div>
+
+<div class="bg-gradient-primary py-32pt py-lg-64pt">
+  <div class="{{ containerClass }} page__container">
+    <div class="hero text-center">
+      <div class="avatar avatar-lg mb-3">
+        <img src="assets/images/icon/teacher/white.svg" alt="Instructor" class="avatar-img" />
+      </div>
+      <h2 class="h1 text-white">Instructor</h2>
+      <p class="lead measure-lead-max mx-auto text-white-50">A collection of website pages designed to provide teachers with a complete publishing platform for learning. Inspired from the most popular learning platforms on the web today.</p>
+      <a href="{{ demo_url }}instructor-dashboard.html" target="_blank" class="btn btn-lg btn-outline-white btn-rounded">Instructor demo</a>
+    </div>
+  </div>
+</div>
+
+<div class="py-32pt pb-lg-64pt {{ containerClass }} page__container">
+
+  <div class="page-separator" id="instructor-demos">
+    <div class="page-separator__text">Instructor</div>
+  </div>
+
+  <div class="row row-cards">
+    {% for item in instructor %}
+      {{ demo.component(item=item, demo_url=demo_url) }}
+    {% endfor %}
+  </div>
+
+  <div class="page-separator" id="financial-demos">
+    <div class="page-separator__text">Financial</div>
+  </div>
+
+  <div class="row row-cards">
+    {% for item in financial %}
+      {{ demo.component(item=item, demo_url=demo_url) }}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="bg-gradient-primary py-32pt py-lg-64pt">
+  <div class="{{ containerClass }} page__container">
+    <div class="hero text-center">
+      <div class="avatar avatar-lg mb-3">
+        <img src="assets/images/icon/template/white.svg" alt="Utility" class="avatar-img" />
+      </div>
+      <h2 class="h1 text-white">Utility pages</h2>
+      <p class="lead measure-lead-max mx-auto text-white-50 mb-0">Every website needs these pages. Forget about login, signup, forgot password and more. We've got it.</p>
+    </div>
+  </div>
+</div>
+
+<div class="py-32pt pb-lg-64pt {{ containerClass }} page__container">
+  
+  <div class="page-separator" id="auth-demos">
+    <div class="page-separator__text">Authentication</div>
+  </div>
+
+  <div class="row row-cards">
+    {% for item in auth %}
+      {{ demo.component(item=item, demo_url=demo_url) }}
+    {% endfor %}
+  </div>
+
+  <div class="page-separator" id="account-demos">
+    <div class="page-separator__text">Account</div>
+  </div>
+
+  <div class="row row-cards">
+    {% for item in account %}
+      {{ demo.component(item=item, demo_url=demo_url) }}
+    {% endfor %}
+  </div>
+
+  <div class="page-separator" id="messages-demos">
+    <div class="page-separator__text">Messages</div>
+  </div>
+
+  <div class="row row-cards">
+    {% for item in messages %}
+      {{ demo.component(item=item, demo_url=demo_url) }}
+    {% endfor %}
+  </div>
+
+</div>
+{% endblock %}

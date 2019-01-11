@@ -1,0 +1,17 @@
+{% macro component(item, demo_url) %}
+<div class="col-md-6 col-lg-4">
+  <div class="card">
+    {% if item.image %}
+    <a href="{{ demo_url }}{{ item.href }}" target="_blank" class="preview bg-hover-scroll" style="background-image: url({{ item.image }});"></a>
+    {% endif %}
+    <div class="card-body">
+      {% if item.title %}
+        <strong class="text-body">{{ item.title | safe }}</strong><br>
+      {% endif %}
+      {% if item.description %}
+        <span class="text-black-70">{{ item.description | safe }}</span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endmacro %}

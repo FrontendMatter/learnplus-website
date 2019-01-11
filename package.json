@@ -16,7 +16,7 @@
     "bootstrap-custom-checkbox-toggle": "^1.0.0",
     "fm-avatar": "^1.0.0",
     "highlight.js": "^9.13.1",
-    "ui-learnplus-bootstrap": "gitlab:FrontendMatter/ui-learnplus-bootstrap#v2.0.0"
+    "ui-learnplus-bootstrap": "gitlab:FrontendMatter/ui-learnplus-bootstrap#v2.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
